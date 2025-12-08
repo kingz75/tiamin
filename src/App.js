@@ -1,38 +1,80 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/header";
-import Home from "./components/Home/home.jsx";
-import Footer from "./components/Footer/footer";
-import About from "./components/About/about.jsx";
-import Program from "./components/Program/program";
-import ProgramDetail from "./components/Program/ProgramDetail";
-//import News from './components/News/news';
-import Contact from "./components/Contact/contact";
-import Donate from "./components/Donate/donate";
-import ScrollToTop from "./components/ScrollToTop.js";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
+// MAIN PAGES
+{
+  /*
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Projects from "./pages/Projects";
+import Academy from "./pages/Academy";
+import Careers from "./pages/Careers";
+import News from "./pages/News";
+import Contact from "./pages/Contact";
+
+// SERVICE PAGES
+import Gasdistribution from "./pages/services/Gasdistribution";
+import Gasprocessing from "./pages/services/Gasprocessing";
+import Oilngas from "./pages/services/oilngas";
+import Pipeline from "./pages/services/pipeline";
+import Procurement from "./pages/services/Procurement";
+import Storage from "./pages/services/storage";
+import Technical from "./pages/services/technical";
+import Utility from "./pages/services/utility";
+
+// PROJECT PAGES
+import Ded from "./pages/projects/Ded";
+import Feed from "./pages/projects/Feed";
+import Integrity from "./pages/projects/integrity";
+import Lpg from "./pages/projects/Lpg";         
+*/
+}
+
+export default function App() {
   return (
     <Router>
-      <ScrollToTop />
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/program" element={<Program />} />
-        <Route path="/program/:id" element={<ProgramDetail />} />{" "}
-        {/*	<Route
-					path="/news"
-					element={<News />}
-				/> */}
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/donate" element={<Donate />} />
-      </Routes>
+      {/*  <Routes>
+          {/* Main Routes */}
+      {/*
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/academy" element={<Academy />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Services Sub Routes */}
+      {/*
+          <Route
+            path="/services/gasdistribution"
+            element={<Gasdistribution />}
+          />
+          <Route path="/services/gasprocessing" element={<Gasprocessing />} />
+          <Route path="/services/oilngas" element={<Oilngas />} />
+          <Route path="/services/pipeline" element={<Pipeline />} />
+          <Route path="/services/procurement" element={<Procurement />} />
+          <Route path="/services/storage" element={<Storage />} />
+          <Route path="/services/technical" element={<Technical />} />
+          <Route path="/services/utility" element={<Utility />} />
+
+          {/* Project Sub Routes */}
+      {/*
+          <Route path="/projects/ded" element={<Ded />} />
+          <Route path="/projects/feed" element={<Feed />} />
+          <Route path="/projects/integrity" element={<Integrity />} />
+          <Route path="/projects/lpg" element={<Lpg />} />
+        </Routes>
+    
+      */}
 
       <Footer />
     </Router>
   );
 }
-
-export default App;
