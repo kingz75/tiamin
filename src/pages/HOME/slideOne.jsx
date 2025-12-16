@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function SlideOne({ active }) {
 	return (
 		<div
-			className={`absolute inset-0 transition-opacity  duration-[1200ms] 
+			className={`absolute inset-0  transition-opacity  duration-[1200ms] 
       ${active ? 'opacity-100 z-20' : 'opacity-0 z-0'}
     `}
 		>
@@ -16,7 +16,7 @@ export default function SlideOne({ active }) {
 
 			<div className="absolute inset-0 bg-black/20" />
 
-			<div className="relative max-w-[1200px]  mx-auto h-full flex flex-col pt-[50px]  text-[#ffffff] animate-fadeSlide">
+			<div className="relative max-w-[1370px] px-[100px]   mx-auto h-full flex flex-col justify-center pt-[50px]  text-[#ffffff] animate-fadeSlide">
 				<h1 className="text-[48px] leading-[58px] font-bold ">
 					A 100% Nigerian EPC partner
 				</h1>

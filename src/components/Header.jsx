@@ -1,21 +1,11 @@
 import React, { useState } from 'react';
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import Mainicon from '../assets/icons/mainicon.svg';
-import {
-	FaMapMarkerAlt,
-	FaEnvelope,
-	FaTwitter,
-	FaFacebookF,
-	FaLinkedinIn,
-	FaInstagram,
-	FaChevronDown,
-	FaChevronUp,
-} from 'react-icons/fa';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import Mainicon from '../assets/icons/footericon.svg';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-export default function Header() {
+export default function Header2() {
 	const [serviceOpen, setServiceOpen] = useState(false);
 	const [projectOpen, setProjectOpen] = useState(false);
-	const navigate = useNavigate();
 
 	// Detect active path
 	const { pathname } = useLocation();
@@ -23,78 +13,23 @@ export default function Header() {
 	const isProjectActive = pathname.startsWith('/projects');
 
 	return (
-		<header className="w-full font-Montserrat">
-			{/* TOP BAR */}
-			<div className="bg-[#002b45]">
-				<div className="text-[#FFFFFF] text-[12px] font-medium py-2 px-[80px] max-w-[1100px] mx-auto flex justify-between items-center">
-					<div className="flex items-center gap-2">
-						<FaMapMarkerAlt size={14} />
-						<span>
-							Plot 2, Block 115, Ayo Babatunde Crescent, Off Oniru New Market
-							Road, Lekki, Lagos State, Nigeria
-						</span>
-					</div>
-
-					<div className="flex items-center gap-28">
-						<div className="flex items-center gap-2">
-							<FaEnvelope size={14} />
-							<span>cozym@cozymtld.com</span>
-						</div>
-
-						<div className="flex gap-4">
-							<a
-								href="https://twitter.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaTwitter size={14} />
-							</a>
-
-							<a
-								href="https://facebook.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaFacebookF size={14} />
-							</a>
-
-							<a
-								href="https://linkedin.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaLinkedinIn size={14} />
-							</a>
-
-							<a
-								href="https://instagram.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:text-[#FAA419]"
-							>
-								<FaInstagram size={14} />
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
+		<header className="w-full">
 			{/* NAV BAR */}
-			<div className="bg-white">
-				<div className="py-[25px] px-[40px] max-w-[1400px] mx-auto flex justify-between items-center gap-6 relative">
+			<div className=" w-full absolute top-0 left-0 z-50">
+				<div className="py-[25px] px-[100px] max-w-[1370px] mx-auto flex justify-between items-center gap-4 relative">
 					{/* Logo */}
-					<Link to="/">
-						<img
-							src={Mainicon}
-							alt="logo"
-						/>
-					</Link>
+					<div className=" h-[53px] w-[210px] ">
+						<Link to="/">
+							<img
+								src={Mainicon}
+								alt="logo"
+								className=" "
+							/>
+						</Link>
+					</div>
 
 					<nav>
-						<ul className="flex items-center gap-6 text-[#002b45] font-semibold">
+						<ul className="flex items-center gap-6 text-[#ffffff] font-semibold">
 							{/* HOME */}
 							<NavLink
 								to="/"
@@ -135,59 +70,93 @@ export default function Header() {
 								</span>
 
 								{serviceOpen && (
-									<div className="absolute top-6 left-0 bg-white shadow-lg rounded w-[350px] py-2 z-50">
+									<div className="absolute top-6 left-0 bg-white/10 backdrop-blur-[10px] shadow-lg rounded w-[350px] py-6 z-50">
 										<NavLink
 											to="/services/oilngas"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Oil & Gas Production Facilities
 										</NavLink>
 
 										<NavLink
 											to="/services/gasprocessing"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Gas Processing & Conditioning
 										</NavLink>
 
 										<NavLink
 											to="/services/gasdistribution"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Gas Distribution & Terminals
 										</NavLink>
+										<br />
 
 										<NavLink
 											to="/services/pipeline"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Pipelines & Distribution Networks
 										</NavLink>
 
 										<NavLink
 											to="/services/technical"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Technical Training
 										</NavLink>
+										<br />
 
 										<NavLink
 											to="/services/storage"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Storage Facilities
 										</NavLink>
 
 										<NavLink
 											to="/services/utility"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Utility & Support Infrastructure
 										</NavLink>
 
 										<NavLink
 											to="/services/procurement"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                  after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                  after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                  after:transition-all after:duration-300
+                                  hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Procurement Services
 										</NavLink>
@@ -215,31 +184,47 @@ export default function Header() {
 								</span>
 
 								{projectOpen && (
-									<div className="absolute top-6 left-0 bg-white shadow-lg rounded w-[350px] py-2 z-50">
+									<div className="absolute top-6 left-0 bg-white/10 backdrop-blur-[10px] shadow-lg rounded w-[350px] py-6 z-20">
 										<NavLink
 											to="/projects/lpg"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
 										>
 											LPG Storage & Distribution Terminal
 										</NavLink>
 
 										<NavLink
 											to="/projects/feed"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
 										>
 											FEED — 1.6 km LPG Onshore Pipeline
 										</NavLink>
 
 										<NavLink
 											to="/projects/ded"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
 										>
 											DED — 18 km Onshore Gas Distribution
 										</NavLink>
 
 										<NavLink
 											to="/projects/integrity"
-											className="block px-4 py-2 hover:bg-gray-100"
+											className="relative inline-block px-4 py-2 text-[#ffffff60]
+                                   after:content-[''] after:absolute after:left-0 after:-bottom-1
+                                   after:h-[2px] after:w-0 after:bg-[#FAA419]
+                                   after:transition-all after:duration-300
+                                   hover:after:w-28 hover:text-[#ffffff]"
 										>
 											Integrity Assessment & FEED
 										</NavLink>
@@ -248,25 +233,14 @@ export default function Header() {
 							</div>
 
 							{/* OTHER LINKS */}
-							<span
-								onClick={() => {
-									if (pathname === '/') {
-										document
-											.getElementById('training-capacity')
-											?.scrollIntoView({ behavior: 'smooth' });
-									} else {
-										navigate('/');
-										setTimeout(() => {
-											document
-												.getElementById('training-capacity')
-												?.scrollIntoView({ behavior: 'smooth' });
-										}, 100);
-									}
-								}}
-								className="hover:text-[#FAA419] cursor-pointer"
+							<NavLink
+								to="/academy"
+								className={({ isActive }) =>
+									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
+								}
 							>
 								Academy
-							</span>
+							</NavLink>
 
 							<NavLink
 								to="/careers"
@@ -298,9 +272,11 @@ export default function Header() {
 					</nav>
 
 					{/* Download Button */}
-					<button className="bg-[#002b45] text-white px-[50px] py-[15px] rounded">
-						Download Our Profile
-					</button>
+					<div>
+						<button className="bg-[#FAA419] text-white px-[25px] py-[10px] rounded">
+							Download Profile
+						</button>
+					</div>
 				</div>
 			</div>
 		</header>

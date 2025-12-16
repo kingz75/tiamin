@@ -26,7 +26,7 @@ export default function Home() {
 
 	return (
 		<>
-			<div className="relative w-full h-[calc(100vh-100px)] font-Montserrat  overflow-hidden">
+			<div className="relative w-full h-[calc(100vh-0px)] font-Montserrat  overflow-hidden">
 				<SlideOne active={index === 0} />
 				<SlideTwo active={index === 1} />
 				<SlideThree active={index === 2} />

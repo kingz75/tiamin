@@ -15,7 +15,7 @@ export default function SlideThree({ active }) {
 
 			<div className="absolute inset-0 bg-black/20" />
 
-			<div className="relative max-w-[1200px]  mx-auto h-full w-full pb-[5%] flex flex-col justify-end items-end pt-[10%]  text-white animate-fadeSlide">
+			<div className="relative max-w-[1370px] px-[100px]  mx-auto h-full w-full pb-[5%] flex flex-col justify-end items-end pt-[10%]  text-white animate-fadeSlide">
 				<div>
 					<h1 className="text-[48px] text-[#FAA419] font-extrabold">
 						Key Fact

@@ -13,24 +13,25 @@ export default function CompanySlider() {
   const prevPage = () => setPage((p) => Math.max(p - 1, 0));
 
   return (
-    <div className="relative w-full bg-[#002941] overflow-hidden text-white py-6">
+    <div className="relative w-full bg-[#002941] overflow-hidden text-white py-6 ">
       {/* MAIN SLIDER */}
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${page * 100}%)` }}
       >
         {/* SLIDE 1 */}
-        <div className="w-full flex-none flex items-center px-[220px]">
-          <div className="grid grid-cols-2 gap-28  max-w-[1100px]  mx-auto">
+        <div className="w-full flex-none flex items-center ">
+          <div className="grid grid-cols-2 gap-28 max-w-[1400px]  mx-auto  ">
             {/* Vision */}
             <div className="space-y-3">
               <h2 className="text-[48px] font-extrabold text-[#FAA419] flex items-center gap-4">
                 Our Vision
                 <img src={vision} alt="vision icon" className="" />
               </h2>
-              <p className="text-[16px] leading-[21px] font-medium text-[#FFFFFF]">
-                To be the trusted partner delivering reliable and innovative oil
-                and gas infrastructure in Nigeria and across West Africa.
+              <p className="text-[16px] leading-[21px] font-medium text-[#FFFFFF] ">
+                To be the trusted partner delivering reliable <br /> and
+                innovative oil and gas infrastructure in <br /> Nigeria and
+                across West Africa.
               </p>
             </div>
 
@@ -41,16 +42,17 @@ export default function CompanySlider() {
                 <img src={mission} alt="mission icon" className="" />
               </h2>
               <p className="text-[16px] leading-[21px] font-medium text-[#FFFFFF]">
-                We deliver dependable oil and gas infrastructure combining
+                We deliver dependable oil and gas infrastructure combining{" "}
+                <br />
                 technical excellence, innovation, and compliance to create
-                lasting value for clients across Nigeria and West Africa.
+                lasting <br /> value for clients across Nigeria and West Africa.
               </p>
             </div>
           </div>
         </div>
 
         {/* SLIDE 2 */}
-        <div className="w-full flex-none px-[220px] flex flex-col justify-center py-10">
+        <div className="w-full flex-none  flex flex-col justify-center py-16">
           <div className="mx-auto">
             <h2 className="text-[48px] font-extrabold text-[#FAA419] mb-10 flex items-center gap-4">
               Corporate Values

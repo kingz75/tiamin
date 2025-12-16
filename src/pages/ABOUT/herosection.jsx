@@ -40,8 +40,8 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Content at Bottom */}
-      <div className="absolute bottom-14 left-0 w-full  px-10 z-10 text-white ">
-        <h1 className="text-[64px] font-extrabold leading-[76px]  max-w-[1100px] mx-auto flex  ">
+      <div className="absolute bottom-14 left-0 w-full   z-10 text-white ">
+        <h1 className="text-[50px] font-extrabold leading-[60px]  max-w-[1370px] mx-auto flex px-[100px]  ">
           Provides integrated EPC <br />
           capabilities across the <br />
           oil & gas project lifecycle
