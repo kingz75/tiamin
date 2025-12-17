@@ -16,14 +16,14 @@ export default function SlideOne({ active }) {
 
 			<div className="absolute inset-0 bg-black/20" />
 
-			<div className="relative max-w-[1370px] px-[100px]   mx-auto h-full flex flex-col justify-center pt-[50px]  text-[#ffffff] animate-fadeSlide">
-				<h1 className="text-[48px] leading-[58px] font-bold ">
+			<div className="relative max-w-[1370px] px-[90px] pb-10   mx-auto h-full flex flex-col justify-center pt-[50px]  text-[#ffffff] animate-fadeSlide">
+				<h1 className="text-[45px] leading-[58px] font-bold ">
 					A 100% Nigerian EPC partner
 				</h1>
-				<h1 className="text-[48px] leading-[58px] font-bold ">
+				<h1 className="text-[45px] leading-[58px] font-bold ">
 					Delivering oil & gas infrastructure
 				</h1>
-				<h1 className="text-[48px] leading-[58px] font-bold ">
+				<h1 className="text-[45px] leading-[58px] font-bold ">
 					across Nigeria & West Africa
 				</h1>
 				<div

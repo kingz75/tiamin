@@ -41,7 +41,7 @@ const CaseStudies = () => {
 
 	return (
 		<div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-			<div className="max-w-[1200px] mx-auto">
+			<div className="max-w-[1370px] mx-auto px-[100px]">
 				{/* Header */}
 				<h1 className="text-[36px] leading-[43px] font-bold text-[#002B45] mb-16 ">
 					Selected Case Studies
@@ -52,7 +52,7 @@ const CaseStudies = () => {
 					{caseStudies.map(study => (
 						<div
 							key={study.id}
-							className="rounded-lg  p-[30px] shadow-lg overflow-hidden h-full"
+							className="rounded-lg p-[30px] shadow-lg overflow-hidden h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
 						>
 							<div className="flex flex-col sm:flex-row h-full">
 								{/* Image Section */}

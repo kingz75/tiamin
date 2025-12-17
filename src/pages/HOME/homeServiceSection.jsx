@@ -130,7 +130,7 @@ export default function HomeServiceSection() {
 				backgroundRepeat: 'no-repeat',
 			}}
 		>
-			<div className="max-w-7xl mx-auto px-4">
+			<div className="max-w-[1370px] mx-auto px-[100px]">
 				<div className=" mb-[42px]">
 					<p className="text-[36px] leading-[43px] font-semibold text-[#002B45] inline-block">
 						Our Services
@@ -164,7 +164,7 @@ export default function HomeServiceSection() {
 
 							{/* Content */}
 							<div className="flex flex-col mt-5 px-7 py-7 bg-transparent flex-grow border-2 border-[#E7E7E7] rounded-lg">
-								<h3 className="text-[24px] leading-[28px] font-semibold text-[#002B45] mb-5 transition-all duration-500 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:transform group-hover:scale-105">
+								<h3 className="text-[24px] leading-[28px] font-semibold text-[#002B45] mb-5 transition-all duration-500 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#002B45] group-hover:to-[#000e17] group-hover:bg-clip-text group-hover:transform group-hover:scale-105">
 									{card.title}
 								</h3>
 

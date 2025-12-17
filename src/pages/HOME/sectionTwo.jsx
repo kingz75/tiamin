@@ -29,7 +29,7 @@ export default function SectionTwo() {
 	return (
 		<div>
 			<div>
-				<section className="py-[160px] max-w-[1100px] mx-auto flex flex-col md:flex-row gap-10">
+				<section className="py-[160px] max-w-[1370px] px-[100px] mx-auto flex flex-col md:flex-row gap-10">
 					<div className="bg-white p-8 rounded-xl shadow-lg w-1/2 h-[584px]">
 						<h3 className="text-[24px] font-semibold mb-4">About Us</h3>
 						<h2 className="text-[36px] text-[#002B45] leading-[43px] font-bold mb-4">

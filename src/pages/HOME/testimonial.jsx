@@ -39,12 +39,10 @@ const TestimonialSlider = () => {
 	];
 
 	const startAutoPlay = () => {
-		if (timerRef.current) return; // Don't start if already running
+		if (timerRef.current) clearInterval(timerRef.current);
 		timerRef.current = setInterval(() => {
-			if (!videoPlaying) {
-				nextSlide();
-			}
-		}, 5000);
+			nextSlide();
+		}, 10000);
 	};
 
 	const stopAutoPlay = () => {
@@ -55,45 +53,30 @@ const TestimonialSlider = () => {
 	};
 
 	useEffect(() => {
-		if (!videoPlaying) {
+		if (isPlaying && !videoPlaying) {
 			startAutoPlay();
 		} else {
 			stopAutoPlay();
 		}
 
 		return () => stopAutoPlay();
-	}, [currentSlide, videoPlaying]);
+	}, [isPlaying, currentSlide, videoPlaying]);
 
 	// Load YouTube API and initialize player
 	useEffect(() => {
 		const loadYouTubeAPI = () => {
 			if (window.YT && window.YT.Player) {
-				// API ready, initialize if on video slide
-				if (currentSlide === 0) {
-					setTimeout(() => {
-						if (iframeRef.current) {
-							initializePlayer();
-						}
-					}, 100);
-				}
+				initializePlayer();
 			} else {
 				const script = document.createElement('script');
 				script.src = 'https://www.youtube.com/iframe_api';
 				document.body.appendChild(script);
-				window.onYouTubeIframeAPIReady = () => {
-					if (currentSlide === 0) {
-						setTimeout(() => {
-							if (iframeRef.current) {
-								initializePlayer();
-							}
-						}, 100);
-					}
-				};
+				window.onYouTubeIframeAPIReady = initializePlayer;
 			}
 		};
 
 		const initializePlayer = () => {
-			if (iframeRef.current) {
+			if (iframeRef.current && currentSlide === 0) {
 				playerRef.current = new window.YT.Player(iframeRef.current, {
 					events: {
 						onStateChange: onPlayerStateChange,
@@ -118,16 +101,8 @@ const TestimonialSlider = () => {
 		return () => {
 			if (playerRef.current) {
 				playerRef.current.destroy();
-				playerRef.current = null;
 			}
 		};
-	}, [currentSlide]);
-
-	// Reset video playing state when leaving video slide
-	useEffect(() => {
-		if (currentSlide !== 0) {
-			setVideoPlaying(false);
-		}
 	}, [currentSlide]);
 
 	const nextSlide = () => {
@@ -263,8 +238,6 @@ const TestimonialSlider = () => {
 										<div className="space-y-8">
 											<div className="relative w-full aspect-video bg-slate-900 rounded-2xl overflow-hidden">
 												<iframe
-													key={currentSlide}
-													ref={iframeRef}
 													src={`https://www.youtube.com/embed/${testimonial.videoId}?enablejsapi=1`}
 													title="Customer Testimonial Video"
 													allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

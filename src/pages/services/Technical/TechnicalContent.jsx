@@ -40,7 +40,17 @@ export default function TechnicalContent() {
 							</p>
 						</div>
 
-						<button className="relative text-[14px] z-10 mt-6 bg-[#FAA419] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#e57a00]">
+						<button
+							className="relative text-[14px] z-10 mt-6 bg-[#FAA419] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#e57a00]"
+							onClick={() =>
+								window.open(
+									`https://wa.me/234907000253?text=${encodeURIComponent(
+										'Hello, I am interested in your Technical Training service.'
+									)}`,
+									'_blank'
+								)
+							}
+						>
 							Consult Now
 						</button>
 					</div>
@@ -64,7 +74,7 @@ export default function TechnicalContent() {
 					{/* Main Text Section */}
 					<div>
 						<h1 className="text-3xl lg:text-[40px] leading-[56px] font-extrabold text-[#ffffff] mb-4">
-							Gas Distribution & Terminals
+							Technical Training
 						</h1>
 						<div className="text-[18px] leading-[26px] text-[#ffffff] text-justify">
 							<p className=" mb-6">

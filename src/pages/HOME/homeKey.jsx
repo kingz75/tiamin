@@ -16,12 +16,12 @@ export default function HomeKey() {
 
 	return (
 		<section
-			className="   bg-cover bg-center flex  px-[230px] pb-[60px] "
+			className="   bg-cover bg-center flex  px-[170px]  pb-[60px] "
 			style={{
 				backgroundImage: `url(${Bg})`,
 			}}
 		>
-			<div className="relative z-10 max-w-[1300px]     text-[#012A42]">
+			<div className="relative z-10    text-[#012A42]">
 				{/* Yellow Header as Image */}
 				<div className="-mt-10 mb-9 ml-16">
 					<img

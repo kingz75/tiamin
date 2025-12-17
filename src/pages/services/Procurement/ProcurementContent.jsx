@@ -40,7 +40,17 @@ export default function ProcurementContent() {
 							</p>
 						</div>
 
-						<button className="relative text-[14px] z-10 mt-6 bg-[#FAA419] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#e57a00]">
+						<button
+							className="relative text-[14px] z-10 mt-6 bg-[#FAA419] text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-[#e57a00]"
+							onClick={() =>
+								window.open(
+									`https://wa.me/234907000253?text=${encodeURIComponent(
+										'Hello, I am interested in your Procurement service.'
+									)}`,
+									'_blank'
+								)
+							}
+						>
 							Consult Now
 						</button>
 					</div>
