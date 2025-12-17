@@ -245,17 +245,19 @@ export default function BlogPage() {
       id: 1,
       image: Newsimage1,
       title:
-        "Gas Flaring Explained: Why It Happens and How It’s Being Turned into Energy",
+        "Gas Flare Commercialisation Programme: Opportunities for EPCC Contractors in Nigeria",
       comments: "1 Comment",
       column: 0,
+      date: "16 December 2025",
     },
     {
       id: 2,
       image: Newsimage2,
       title:
-        "Gas Flaring Explained: Why It Happens and How It’s Being Turned into Energy",
+        "How New Cost-Efficiency Tax Incentives Could Transform EPCC Project Economics in Nigeria",
       comments: "1 Comment",
       column: 1,
+      date: "05 July 2022",
     },
     {
       id: 3,
@@ -264,6 +266,7 @@ export default function BlogPage() {
         "Gas Flaring Explained: Why It Happens and How It’s Being Turned into Energy",
       comments: "5 Comments",
       column: 2,
+      date: "05 July 2022",
     },
   ];
 
@@ -307,7 +310,7 @@ export default function BlogPage() {
 
                 <div className="p-6">
                   <span className="inline-block bg-[#F7C04A] text-white text-xs px-3 py-1 rounded-md">
-                    16 December 2025
+                    {post.date}
                   </span>
 
                   <div className="flex items-center gap-4 text-sm text-gray-500 mt-2">
@@ -361,7 +364,8 @@ export default function BlogPage() {
                     className="w-16 h-14 object-cover rounded-md"
                   />
                   <div>
-                    <span className="text-xs text-gray-500">
+                    <span className="text-xs text-gray-500 flex items-center gap-1 mb-1">
+                      <IoPersonCircle className="text-[#F7C04A]" />
                       by {post.author}
                     </span>
                     <p className="text-sm font-semibold leading-snug">
