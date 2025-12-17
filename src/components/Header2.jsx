@@ -299,9 +299,14 @@ export default function Header() {
 
           {/* Download Button */}
           <div>
-            <button className="bg-[#002b45] text-white px-[25px] py-[10px] rounded">
+            <a
+              href="/cozymprofile.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FAA419] text-white px-[25px] py-[10px] rounded inline-block"
+            >
               Download Profile
-            </button>
+            </a>
           </div>
         </div>
       </div>
