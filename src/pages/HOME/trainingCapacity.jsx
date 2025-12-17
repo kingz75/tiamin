@@ -151,7 +151,7 @@ export default function TrainingCapacity() {
 
 	return (
 		<section
-			id="training-capacity"
+			id="trainingCapacity"
 			ref={sectionRef}
 			className="w-full bg-[#002B45] text-white"
 		>

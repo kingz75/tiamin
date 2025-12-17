@@ -41,6 +41,17 @@ export default function Home() {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	// Scroll to section if hash is present
+	useEffect(() => {
+		const hash = window.location.hash;
+		if (hash) {
+			const element = document.getElementById(hash.substring(1));
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	}, []);
+
 	return (
 		<>
 			{/* HERO / SLIDER SECTION */}

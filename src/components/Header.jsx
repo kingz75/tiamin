@@ -232,15 +232,24 @@ export default function Header2() {
 								)}
 							</div>
 
-							{/* OTHER LINKS */}
-							<NavLink
-								to="/academy"
-								className={({ isActive }) =>
-									`hover:text-[#FAA419] ${isActive ? 'text-[#FAA419]' : ''}`
-								}
+							{/* ACADEMY LINK */}
+							<button
+								onClick={() => {
+									if (pathname === '/') {
+										// Already on homepage, scroll to training capacity section
+										const element = document.getElementById('trainingCapacity');
+										if (element) {
+											element.scrollIntoView({ behavior: 'smooth' });
+										}
+									} else {
+										// Navigate to homepage first, then scroll
+										window.location.href = '/#trainingCapacity';
+									}
+								}}
+								className="hover:text-[#FAA419] cursor-pointer"
 							>
 								Academy
-							</NavLink>
+							</button>
 
 							<NavLink
 								to="/careers"
