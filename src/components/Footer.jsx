@@ -2,11 +2,10 @@ import { Link } from "react-router-dom";
 import { FaTelegramPlane } from "react-icons/fa";
 
 // Import your social icon images
-import TwitterIcon from "../assets/icons/xbg.svg";
-import FacebookIcon from "../assets/icons/facebookbg.svg";
-import LinkedInIcon from "../assets/icons/inbg.svg";
-import InstagramIcon from "../assets/icons/instagrambg.svg";
-import Footericon from "../assets/icons/footericon.svg";
+import TwitterIcon from "../assets/icons/footerx.svg";
+import FacebookIcon from "../assets/icons/footerfacebook.svg";
+import InstagramIcon from "../assets/icons/footerinstagram.svg";
+import Mainicon from "../assets/icons/mainicon.svg";
 
 export default function Footer() {
   return (
@@ -17,7 +16,7 @@ export default function Footer() {
           {/* Left Section */}
           <div>
             <Link to="/">
-              <img src={Footericon} alt="Cozym Logo" className="mb-6" />
+              <img src={Mainicon} alt="Cozym Logo" className="mb-6" />
             </Link>
 
             <p className="text-sm sm:text-base lg:text-[15px] font-medium leading-relaxed text-[#A5A49A]">
@@ -42,13 +41,7 @@ export default function Footer() {
                   className=" cursor-pointer hover:opacity-80"
                 />
               </a>
-              <a href="#" target="_blank">
-                <img
-                  src={LinkedInIcon}
-                  alt="LinkedIn"
-                  className=" cursor-pointer hover:opacity-80"
-                />
-              </a>
+
               <a href="#" target="_blank">
                 <img
                   src={InstagramIcon}

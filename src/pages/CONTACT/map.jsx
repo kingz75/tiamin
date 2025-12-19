@@ -38,7 +38,7 @@ export default function Map() {
         </div>
 
         {/* LEFT — MAP WITH IMAGE OVERLAY */}
-        <div className="w-full relative h-64 sm:h-80 md:h-96 lg:h-[500px] order-2 md:order-1">
+        <div className="w-full relative h-64 sm:h-80 md:h-96 lg:h-full order-2 md:order-1">
           {/* MAP */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76315.81798438779!2d7.471204543737575!3d9.063472604014645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf56c37ed8c23%3A0x7bae1b3c8bb36329!2sCozym%20Limited!5e0!3m2!1sen!2sng!4v1765451752979!5m2!1sen!2sng"
