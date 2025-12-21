@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-// Custom SVG Icons (as image files)
-import vision from "../../assets/icons/vision.svg";
-import mission from "../../assets/icons/mission.svg";
-import values from "../../assets/icons/value.svg";
+import { BiSolidLeftArrow } from "react-icons/bi";
+import { BiSolidRightArrow } from "react-icons/bi";
 
 export default function Vision() {
   const [page, setPage] = useState(0);
@@ -22,7 +18,8 @@ export default function Vision() {
   }, []);
 
   return (
-    <div className="relative w-full bg-[#002941] overflow-hidden text-white py-6 ">
+    <div className="relative w-full bg-[#F8F7F0] overflow-hidden text-white py-14">
+      {" "}
       {/* MAIN SLIDER */}
       <div
         className="flex transition-transform duration-700 ease-in-out"
@@ -30,140 +27,109 @@ export default function Vision() {
       >
         {/* SLIDE 1 */}
         <div className="w-full flex-none flex items-center px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-28 max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-2  gap-28 max-w-[1200px] mx-auto px-10">
             {/* Vision */}
-            <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-extrabold text-[#FAA419] flex items-center gap-2 sm:gap-4">
+            <div className="space-y-3 px-10">
+              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
                 Our Vision
-                <img
-                  src={vision}
-                  alt="vision icon"
-                  className="w-6 h-6 sm:w-8 sm:h-8"
-                />
               </h2>
-              <p className="text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                To be the trusted partner delivering reliable{" "}
-                <br className="hidden sm:block" /> and innovative oil and gas
-                infrastructure in <br className="hidden md:block" /> Nigeria and
-                across West Africa.
+              <p className="text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
+                We aim to establish ourselves as a brand by providing superior
+                quality products and best services. This is to be done by
+                strengthening business relations with stakeholders that include
+                the customers, suppliers and other business associates. We
+                strive to contribute to the overall economy for the Nation’s
+                development by good corporate governance and partnering social
+                responsibilities.
               </p>
             </div>
 
             {/* Mission */}
-            <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-extrabold text-[#FAA419] flex items-center gap-2 sm:gap-4">
+            <div className="space-y-3 px-10">
+              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 sm:gap-4">
                 Our Mission
-                <img
-                  src={mission}
-                  alt="mission icon"
-                  className="w-6 h-6 sm:w-8 sm:h-8"
-                />
               </h2>
-              <p className="text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                We deliver dependable oil and gas infrastructure combining{" "}
-                <br className="hidden sm:block" />
-                technical excellence, innovation, and compliance to create
-                lasting <br className="hidden md:block" /> value for clients
-                across Nigeria and West Africa.
+              <p className="text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
+                Use the most appropriate technical capabilities and skills
+                required to become a leader in the rice business alongside other
+                agricultural commodity chain. As one of the nations leading rice
+                millers, we are committed to deliver precision-perfect quality
+                to our customers; nurture a professional work environment, which
+                fosters employee excellence, growth and job satisfaction; and
+                build a financially strong, growth oriented company that creates
+                value of integrity and honesty in all business transactions.
               </p>
             </div>
           </div>
         </div>
 
         {/* SLIDE 2 */}
-        <div className="w-full flex-none flex flex-col justify-center py-8 sm:py-12 lg:py-16 px-4">
-          <div className="mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-extrabold text-[#FAA419] mb-6 sm:mb-8 lg:mb-10 flex items-center gap-2 sm:gap-4">
-              Corporate Values
-              <img
-                src={values}
-                alt="values icon"
-                className="w-6 h-6 sm:w-8 sm:h-8"
-              />
-            </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-[1100px] mx-auto">
-              <div>
-                <h3 className="text-[#FAA419] text-sm sm:text-base lg:text-[16px] font-bold">
-                  INTEGRITY
-                </h3>
-                <p className="mt-1 text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                  We deliver on our promises with transparency, accountability,
-                  and ethical conduct.
+        <div className="w-full flex-none flex items-center px-4">
+          <div className="grid grid-cols-2 gap-28 max-w-[1200px] mx-auto px-10 ">
+            {/* corporate */}
+            <div className="space-y-3 px-10 ">
+              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
+                Corporate Values
+              </h2>
+              <div className="space-y-3">
+                <p className="text-[16px] leading-relaxed font-bold text-[#878680] text-justify">
+                  Excellence:{" "}
+                  <span className="font-medium">
+                    {" "}
+                    We strive to achieve the highest levels of quality and
+                    innovation in all aspects of our operations.{" "}
+                  </span>
+                </p>
+                <p className="text-[16px] leading-relaxed font-bold text-[#878680] text-justify">
+                  Integrity:{" "}
+                  <span className="font-medium">
+                    We uphold the highest ethical standards and principles,
+                    maintaining transparency in all our dealings with
+                    stakeholders and partners.
+                  </span>
+                </p>
+                <p className="text-[16px] leading-relaxed font-bold text-[#878680]">
+                  Environmental Responsibility:{" "}
+                  <span className="font-medium">
+                    {" "}
+                    We are committed to minimizing our environmental impact
+                    through sustainable practices and eco-friendly products.
+                  </span>
                 </p>
               </div>
+            </div>
 
-              <div>
-                <h3 className="text-[#FAA419] text-sm sm:text-base lg:text-[16px] font-bold">
-                  INNOVATION
-                </h3>
-                <p className="mt-1 text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                  We think ahead solving complex challenges with smart, adaptive
-                  engineering solutions.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-[#FAA419] text-sm sm:text-base lg:text-[16px] font-bold">
-                  RELIABILITY
-                </h3>
-                <p className="mt-1 text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                  We uphold a standard of consistency and reliability that
-                  ensures we deliver every time.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-[#FAA419] text-sm sm:text-base lg:text-[16px] font-bold">
-                  EXECUTION EXCELLENCE
-                </h3>
-                <p className="mt-1 text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                  We build with discipline and precision, ensuring every project
-                  meets the highest standards.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-[#FAA419] text-sm sm:text-base lg:text-[16px] font-bold">
-                  PARTNERSHIP
-                </h3>
-                <p className="mt-1 text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                  We work collaboratively aligning with our clients and
-                  suppliers to achieve shared success.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-[#FAA419] text-sm sm:text-base lg:text-[16px] font-bold">
-                  SAFETY & QUALITY
-                </h3>
-                <p className="mt-1 text-sm sm:text-base lg:text-[16px] leading-relaxed font-medium text-[#FFFFFF]">
-                  We never compromise delivering infrastructure that is safe,
-                  durable, and built to last.
-                </p>
-              </div>
+            {/* social */}
+            <div className="space-y-3 px-10 ">
+              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
+                Social Responsibility
+              </h2>
+              <p className="text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
+                We actively seek ways to give back to our community, supporting
+                causes related to health, education, and environmental
+                sustainability.
+              </p>
             </div>
           </div>
         </div>
       </div>
-
       {/* NAVIGATION ARROWS - Hidden on mobile */}
       <button
         onClick={prevPage}
-        className={`hidden md:block absolute left-5 top-1/2 -translate-y-1/2 text-white text-3xl ${
+        className={`hidden md:block absolute left-5 top-1/2 -translate-y-1/2 text-[#D9D9D9] text-3xl ${
           page === 0 ? "opacity-20 cursor-not-allowed" : "cursor-pointer"
         }`}
       >
-        <FaArrowLeft />
+        <BiSolidLeftArrow />
       </button>
-
       <button
         onClick={nextPage}
-        className={`hidden md:block absolute right-5 top-1/2 -translate-y-1/2 text-white text-3xl ${
+        className={`hidden md:block absolute right-5 top-1/2 -translate-y-1/2 text-[#D9D9D9] text-3xl ${
           page === 1 ? "opacity-20 cursor-not-allowed" : "cursor-pointer"
         }`}
       >
-        <FaArrowRight />
+        <BiSolidRightArrow />
       </button>
     </div>
   );

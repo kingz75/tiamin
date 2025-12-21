@@ -1,5 +1,5 @@
 import React from "react";
-import Videobg from "../../assets/back/videobg.png";
+import Videobg from "../../../assets/back/list1videobg.png";
 
 const video = () => {
   return (

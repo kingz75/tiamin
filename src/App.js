@@ -17,12 +17,12 @@ import About from "./pages/About";
 
 //import Careers from "./pages/Gallery";
 //import Shop from "./pages/Shop";
-//import Contact from "./pages/Contact";
+import Contact from "./pages/Contact";
 
-//import Ded from "./pages/subsidiries/DED/Ded";
-//import Feed from "./pages/subsidiries/Feed/Feed";
-//import Integrity from "./subsidiries/projects/Integrity/integrity";
-//import Lpg from "./pages/subsidiries/LPG/Lpg";
+import List1 from "./pages/subsidiaries/list1";
+import List2 from "./pages/subsidiaries/list2";
+import List3 from "./pages/subsidiaries/list3";
+import List4 from "./pages/subsidiaries/list4";
 
 export default function App() {
   function AppContent() {
@@ -42,17 +42,17 @@ export default function App() {
           <Route path="/careers" element={<Careers />} />
 
           <Route path="/shop" element={<Shop />} />
+          */}
 
           <Route path="/contact" element={<Contact />} />
 
           {/* su Sub Routes */}
 
-          {/*  <Route path="/subsidiries/ded" element={<Ded />} />
-          <Route path="/subsidiries/feed" element={<Feed />} />
-          <Route path="/subsidiries/integrity" element={<Integrity />} />
-          <Route path="/subsidiries/lpg" element={<Lpg />} />
-
-		  */}
+          <Route path="/subsidiaries/list1" element={<List1 />} />
+          <Route path="/subsidiaries/list2" element={<List2 />} />
+          <Route path="/subsidiaries/list3" element={<List3 />} />
+          <Route path="/subsidiaries/list4" element={<List4 />} />
+          
         </Routes>
 
         <Footer />
