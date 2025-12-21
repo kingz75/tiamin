@@ -31,9 +31,9 @@ export default function Top() {
             <p className="font-semibold text[12px] text-[#878680]">
               Call anytime
             </p>
-            <p>+2348034650072</p>
-            <p>+2348036876426</p>
-            <p>+2348032057724</p>
+            <p>+234 803 465 0072</p>
+            <p>+234 803 687 6426</p>
+            <p>+234 803 205 7724</p>
           </div>
           <div className="bg-[#0f000060] w-[0.07px] h-14"></div>
 

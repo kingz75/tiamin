@@ -4,7 +4,7 @@ import Aboutbg from "../../assets/back/aboutbg.jpg";
 export default function Abouthero() {
   return (
     <div
-      className=" px-[100px] bg-cover bg-center items-center flex  h-[300px] justify-center absolute inset-0   "
+      className=" px-[100px] bg-cover bg-center items-center flex -mt-9  h-[300px] justify-center  "
       style={{
         backgroundImage: `url(${Aboutbg})`,
       }}

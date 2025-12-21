@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import Project from "../../assets/back/projectbg.png";
+
 
 function CountUp({ end, start }) {
   const [count, setCount] = useState(0);
@@ -49,14 +51,16 @@ export default function Team() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="bg-[#012A42] w-full py-12 sm:py-16">
+    <div ref={sectionRef} className=" w-full py-16 " style={{
+        backgroundImage: `url(${Project})`,
+      }}>
       <div className="mx-auto max-w-[1100px] px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-3 justify-items-center gap-8 sm:gap-12 lg:gap-28 text-sm sm:text-base lg:text-[18px] text-[#A5A49A] font-medium text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 justify-items-center gap-8 sm:gap-12 lg:gap-10 text-sm sm:text-base lg:text-[18px] text-[#A5A49A] font-medium text-center">
           <div>
             <p className="text-2xl sm:text-3xl font-bold text-white">
               <CountUp end={250} start={startCount} />
             </p>
-            <p>Professional Team</p>
+            <p>Agriculture Products</p>
           </div>
 
           <div>
@@ -71,6 +75,12 @@ export default function Team() {
               <CountUp end={50} start={startCount} />
             </p>
             <p>Satisfied Clients</p>
+          </div>
+          <div>
+            <p className="text-2xl sm:text-3xl font-bold text-white">
+              <CountUp end={100} start={startCount} />
+            </p>
+            <p>Experts Farmers</p>
           </div>
         </div>
       </div>
