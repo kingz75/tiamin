@@ -4,6 +4,7 @@ import Rice from "./LIST1/rice";
 import Logo from "./LIST1/logo";
 import Video from "./LIST1/video";
 import Image from "./LIST1/image";
+import Discover from "./LIST1/discover";
 
 const List1 = () => {
   return (
@@ -13,6 +14,7 @@ const List1 = () => {
       <Logo/>
       <Video/>
       <Image/>
+      <Discover/>
     </div>
   );
 };

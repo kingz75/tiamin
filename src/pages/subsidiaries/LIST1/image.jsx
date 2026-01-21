@@ -1,6 +1,6 @@
 import React from "react";
 
-// replace with your real images
+
 import Img1 from "../../../assets/images/img1.jpg";
 import Img2 from "../../../assets/images/img2.jpg";
 import Img3 from "../../../assets/images/img3.jpg";
@@ -14,7 +14,7 @@ import Img10 from "../../../assets/images/img10.jpg";
 import Img11 from "../../../assets/images/img11.jpg";
 import Img12 from "../../../assets/images/img12.jpg";
 
-/* ---------- Image Card ---------- */
+
 function ImageCard({ img }) {
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden self-start">
@@ -23,7 +23,7 @@ function ImageCard({ img }) {
   );
 }
 
-/* ---------- Gallery Card ---------- */
+
 function GalleryCard({ img, title }) {
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden text-center">
@@ -35,7 +35,7 @@ function GalleryCard({ img, title }) {
   );
 }
 
-/* ---------- Main Section ---------- */
+/*Main Section */
 export default function GallerySection() {
   return (
     <section className="py-16 px-20">

@@ -1,10 +1,17 @@
 import React from "react";
+import Hero from "./LIST3/list3hero";
+import Exchangelogo from "./LIST3/exchangelogo";
+import Exchange from "./LIST3/exchange";
+
+
 
 const List3 = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold mb-4">Subsidiary 3</h1>
-      <p>This is the page for Subsidiary 3.</p>
+    <div>
+      <Hero />
+      <Exchangelogo/>
+      <Exchange/>
+      
     </div>
   );
 };

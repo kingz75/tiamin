@@ -1,20 +1,20 @@
 import React from "react";
-import Aboutbg from "../../assets/back/aboutbg.jpg";
+import Herobg from "../../../assets/back/list4hero.jpg";
 
-export default function Abouthero() {
+export default function Hero() {
   return (
     <div
-      className=" px-[100px]  bg-cover bg-center items-center flex  h-[300px] justify-center absolute inset-0   "
+      className=" px-[100px] bg-cover bg-center items-center flex -mt-9  h-[300px] justify-center  "
       style={{
-        backgroundImage: `url(${Aboutbg})`,
+        backgroundImage: `url(${Herobg})`,
       }}
     >
       <div>
         <p className="text-[#ffffff]  text-[14px] font-semibold mt-3 drop-shadow text-center">
-          Home / ABOUT
+          Home <span className="ml-6"> Tiamin Air</span>
         </p>
         <h1 className="text-[#ffffff]   text-[50px] font-extrabold drop-shadow-lg">
-          About
+          Subsidiaries
         </h1>
       </div>
     </div>

@@ -1,12 +1,19 @@
 import React from "react";
+import Hero from "./LIST2/list2hero";
+import Goldimg from "./LIST2/goldimg";
+import Gold from "./LIST2/gold";
 
-const List2 = () => {
+
+
+const List1 = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-4xl font-bold mb-4">Subsidiary 2</h1>
-      <p>This is the page for Subsidiary 2.</p>
+    <div>
+      <Hero />
+      <Goldimg/>
+      <Gold/>
+      
     </div>
   );
 };
 
-export default List2;
+export default List1;
