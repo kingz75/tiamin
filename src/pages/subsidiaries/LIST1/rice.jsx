@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import Grainicon from "../../../assets/icons/riceicon.svg";
 
-export default function TiaminRiceSection() {
+export default function Rice() {
   return (
     <section className="w-full bg-white px-20 pt-16">
       {/* Top Heading */}

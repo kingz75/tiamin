@@ -146,7 +146,7 @@ export default function Head() {
 
           <div className="flex items-center gap-8">
             <CiSearch className="cursor-pointer text-[20px] text-[#1F1E17]" />
-            <FaShoppingCart className="cursor-pointer text-[20px] text-[#1F1E17]" />
+            <FaShoppingCart className="cursor-pointer text-[20px] text-[#1F1E17]"/>
           </div>
         </div>
       </div>
