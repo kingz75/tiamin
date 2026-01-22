@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "./HEADER2/head";
 import Colour from "./HEADER2/colour";
 import Top from "./HEADER2/top";
 
 const Header2 = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileSubsOpen, setMobileSubsOpen] = useState(false);
+
   return (
     <div>
       <Colour />
-      <Top />
-      <Head />
+      <Top menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Head
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        mobileSubsOpen={mobileSubsOpen}
+        setMobileSubsOpen={setMobileSubsOpen}
+      />
     </div>
   );
 };

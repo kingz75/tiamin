@@ -2,11 +2,11 @@ import React from "react";
 
 export default function ProductsAndServices() {
   return (
-    <section className="w-full bg-white pb-20">
-      <div className="max-w-[1400px] mx-auto px-[100px]">
+    <section className="w-full bg-white lg:pb-20 pb-6">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[100px]">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-[30px] font-extrabold text-[#4BAF47] mb-3">
+        <div className="text-center lg:mb-16 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[30px] font-extrabold text-[#4BAF47] mb-3">
             Product and Services
           </h2>
           <p className="max-w-[800px] mx-auto text-[16px] text-[#878680]">
@@ -17,10 +17,10 @@ export default function ProductsAndServices() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-3">
           {/* Card 1 */}
-          <div className="rounded-[28px] bg-[#EEF8EE] p-8">
-            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-4">
+          <div className="rounded-[28px] bg-[#EEF8EE] p-4 sm:p-6 md:p-8">
+            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
               Gold Bars & Coins
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">
@@ -36,8 +36,8 @@ export default function ProductsAndServices() {
           </div>
 
           {/* Card 2 */}
-          <div className="rounded-[28px] bg-[#FFF9E6] p-8">
-            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-4">
+          <div className="rounded-[28px] bg-[#FFF9E6] p-4 sm:p-6 md:p-8">
+            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
               Private Jet Charters
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">
@@ -48,8 +48,8 @@ export default function ProductsAndServices() {
           </div>
 
           {/* Card 3 */}
-          <div className="rounded-[28px] bg-[#EEF8EE] p-8">
-            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-4">
+          <div className="rounded-[28px] bg-[#EEF8EE] p-4 sm:p-6 md:p-8">
+            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
               Private Jet Charters
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">
@@ -60,8 +60,8 @@ export default function ProductsAndServices() {
           </div>
 
           {/* Card 4 */}
-          <div className="rounded-[28px] bg-[#EEF8EE] p-8">
-            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-4">
+          <div className="rounded-[28px] lg:bg-[#EEF8EE] bg-[#FFF9E6] p-4 sm:p-6 md:p-8">
+            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
               Quality Control
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">
@@ -74,8 +74,8 @@ export default function ProductsAndServices() {
           </div>
 
           {/* Card 5 */}
-          <div className="rounded-[28px] bg-[#FFF9E6] p-8">
-            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-4">
+          <div className="rounded-[28px] lg:bg-[#FFF9E6] bg-[#EEF8EE] p-4 sm:p-6 md:p-8">
+            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
               Customer Service
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">
@@ -90,8 +90,8 @@ export default function ProductsAndServices() {
           </div>
 
           {/* Card 6 */}
-          <div className="rounded-[28px] bg-[#EEF8EE] p-8">
-            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-4">
+          <div className="rounded-[28px] lg:bg-[#EEF8EE] bg-[#FFF9E6] p-4 sm:p-6 md:p-8">
+            <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
               Customer Satisfaction
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">

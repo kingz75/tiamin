@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Project from "../../assets/back/projectbg.png";
 
-
 function CountUp({ end, start }) {
   const [count, setCount] = useState(0);
   const hasStarted = useRef(false);
@@ -42,7 +41,7 @@ export default function Team() {
           observer.disconnect();
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -51,11 +50,15 @@ export default function Team() {
   }, []);
 
   return (
-    <div ref={sectionRef} className=" w-full py-16 " style={{
+    <div
+      ref={sectionRef}
+      className=" w-full py-8 md:py-16 "
+      style={{
         backgroundImage: `url(${Project})`,
-      }}>
+      }}
+    >
       <div className="mx-auto max-w-[1100px] px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-4 justify-items-center gap-8 sm:gap-12 lg:gap-10 text-sm sm:text-base lg:text-[18px] text-[#A5A49A] font-medium text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 justify-items-center gap-4 sm:gap-8 md:gap-12 lg:gap-10 text-xs sm:text-sm md:text-base lg:text-[18px] text-[#A5A49A] font-medium text-center">
           <div>
             <p className="text-2xl sm:text-3xl font-bold text-white">
               <CountUp end={250} start={startCount} />
@@ -70,7 +73,7 @@ export default function Team() {
             <p>Projects Completed</p>
           </div>
 
-          <div className="col-span-2 sm:col-span-1">
+          <div className="">
             <p className="text-2xl sm:text-3xl font-bold text-white">
               <CountUp end={50} start={startCount} />
             </p>

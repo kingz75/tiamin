@@ -5,24 +5,24 @@ import Overbg from "../../assets/back/overbg.png";
 export default function Knowus() {
   return (
     <section
-      className="  py-14"
+      className="  py-8 md:py-14"
       style={{
         backgroundImage: `url(${Overbg})`,
       }}
     >
-      <div className="  px-[100px] grid grid-cols-2 gap-16 items-center max-w-[1370px] mx-auto ">
+      <div className="  px-4  lg:px-[100px] grid grid-cols-1  md:grid-cols-2 lg:gap-8 md:gap-16 items-center max-w-[1370px] mx-auto ">
         {/* LEFT IMAGE  */}
-        <div className="">
-          <img src={Over} alt="Agriculture" className=" " />
+        <div className="md:order-first order-last">
+          <img src={Over} alt="Agriculture" className="w-full" />
         </div>
 
         {/* RIGHT CONTENT */}
-        <div>
-          <h2 className="text-[38px] font-extrabold text-[#4BAF47] leading-tight mb-6 text-end">
+        <div className="md:order-last order-first">
+          <h2 className="text-2xl md:text-3xl lg:text-[38px] font-extrabold text-[#4BAF47] leading-tight mb-6 text-center md:text-end">
             Pioneering Excellence in Manufacturing and Agriculture
           </h2>
 
-          <p className="text-[#878680] mb-4 leading-[21px] font-medium text-[16px] text-justify">
+          <p className="text-[#878680] mb-4 leading-relaxed font-medium text-sm md:text-base lg:text-[16px] text-justify">
             Tiamin has grown into one of the nation’s leading manufacturing and
             agricultural companies of the 21st century. Over the past five
             years, we have set the standard for producing the finest home-grown
@@ -31,7 +31,7 @@ export default function Knowus() {
             agribusiness by delivering top-quality products and services to our
             loyal consumers.
           </p>
-          <p className="text-[#878680] mb-4 leading-[21px] font-medium text-[16px] text-justify">
+          <p className="text-[#878680] mb-4 leading-relaxed font-medium text-sm md:text-base lg:text-[16px] text-justify">
             Our diverse portfolio includes road construction, rice processing,
             farming, charcoal production, commodity exchange, and even gold
             trading on the international stage in Dubai, showcasing our

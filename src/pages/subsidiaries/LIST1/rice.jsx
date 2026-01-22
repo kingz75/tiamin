@@ -3,68 +3,72 @@ import Grainicon from "../../../assets/icons/riceicon.svg";
 
 export default function Rice() {
   return (
-    <section className="w-full bg-white px-20 pt-16">
+    <section className="w-full bg-white px-4 sm:px-8 md:px-16 lg:px-20 pt-8 sm:pt-12 md:pt-16">
       {/* Top Heading */}
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-[38px] font-extrabold text-[#4BAF47] mb-3">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-extrabold text-[#4BAF47] mb-3">
           Tiamin Rice Limited
         </h1>
 
-        <p className="text-[14px] font-bold text-[#878680] mb-2">
+        <p className="text-xs sm:text-sm font-bold text-[#878680] mb-2">
           276,000 Metric Tons Annual Milling Capacity
         </p>
 
-        <p className="text-[14px] font-medium text-[#878680] max-w-3xl">
+        <p className="text-xs sm:text-sm font-medium text-[#878680] max-w-3xl">
           This translates to producing 3.3 million bags of premium quality 50kg
           Tiamin rice each year—making us the largest rice mill in Nigeria.
         </p>
       </div>
 
       {/* Content Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16 mt-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 lg:gap-16 gap-6 lg:mt-20 mt-8">
         {/* Left Column */}
         <div>
-          <div className="flex gap-3  ">
-            <img src={Grainicon} alt="grain" className="  w-12  -mt-8 -ml-[60px] " />
+          <div className="flex gap-3">
+            <img
+              src={Grainicon}
+              alt="grain"
+              className="w-8 sm:w-10 md:w-12 -mt-8 -ml-8 sm:-ml-12 md:-ml-[60px]"
+            />
 
-            <h3 className="text-[#4BAF47] font-extrabold text-[20px] mb-4 leading">
+            <h3 className="text-[#4BAF47] font-extrabold text-base sm:text-lg md:text-xl lg:text-[20px] lg:mb-4 mb-2  leading">
               Tiamin Rice Husk Charcoal Briquettes Premium Rice Husk Charcoal
             </h3>
           </div>
 
-          <p className="text-[14px] font-medium text-[#878680] mb-2">
+          <p className="text-xs sm:text-sm font-medium text-[#878680] mb-2">
             We are proud producers of 100% natural food-grade charcoal
             briquettes, with a focus on impeccable service and quality.
           </p>
 
-          <p className="text-[14px] font-medium text-[#878680] mb-4">
+          <p className="text-xs sm:text-sm font-medium text-[#878680] mb-4">
             Tiamin is a Nigerian rice charcoal briquette manufacturer and
             exporter who focuses on briquettes with green material (rice husks).
           </p>
 
-          <ul className="space-y- text-[14px] font-bold text-[#878680]">
+          <ul className="space-y- text-xs sm:text-sm font-bold text-[#878680]">
             <li className="flex items-center gap-2">
-              <Check className="text-[#C5CE38] -ml-[25px] w-4 h-4" />
+              <Check className="text-[#C5CE38] -ml- sm:-ml-6 md:-ml-[25px] w-4 h-4" />
               100% Rice Husks Material (picture)
             </li>
             <li className="flex items-center gap-2">
-              <Check className="text-[#C5CE38] -ml-[25px] w-4 h-4" />
+              <Check className="text-[#C5CE38] -ml- sm:-ml-6 md:-ml-[25px] w-4 h-4" />
               Odorless
             </li>
             <li className="flex items-center gap-2">
-              <Check className="text-[#C5CE38] -ml-[25px] w-4 h-4" />
+              <Check className="text-[#C5CE38] -ml- sm:-ml-6 md:-ml-[25px] w-4 h-4" />
               Low Ash Content
             </li>
             <li className="flex items-center gap-2">
-              <Check className="text-[#C5CE38] -ml-[25px] w-4 h-4" />
+              <Check className="text-[#C5CE38] -ml- sm:-ml-6 md:-ml-[25px] w-4 h-4" />
               Long Burning Time
             </li>
             <li className="flex items-center gap-2">
-              <Check className="text-[#C5CE38] -ml-[25px] w-4 h-4" />
+              <Check className="text-[#C5CE38] -ml- sm:-ml-6 md:-ml-[25px] w-4 h-4" />
               Quick Ignition Time
             </li>
             <li className="flex items-center gap-2">
-              <Check className="text-[#C5CE38] -ml-[25px] w-4 h-4" />
+              <Check className="text-[#C5CE38] -ml- sm:-ml-6 md:-ml-[25px] w-4 h-4" />
               International Standard
             </li>
           </ul>
@@ -73,13 +77,17 @@ export default function Rice() {
         {/* Middle Column */}
         <div>
           <div className="flex gap-3">
-            <img src={Grainicon} alt="grain" className="  w-12 -ml-[60px] " />
-            <h3 className="text-[#4BAF47] font-extrabold text-[20px] mb-4">
+            <img
+              src={Grainicon}
+              alt="grain"
+              className="w-8 sm:w-10 md:w-12 -ml-8 sm:-ml-12 md:-ml-[60px]"
+            />
+            <h3 className="text-[#4BAF47] font-extrabold text-base sm:text-lg md:text-xl lg:text-[20px] lg:mb-4 mb-2">
               Product Category
             </h3>
           </div>
 
-          <p className="text-[14px] font-medium text-[#878680] leading-relaxed text-justify">
+          <p className="text-xs sm:text-sm font-medium text-[#878680] leading-relaxed text-justify">
             We produce different types of rice husk charcoal briquettes for
             wholesale buyers BBQ, Incense, and Hookah. Our briquettes are
             processed from high-grade agricultural waste (rice husks) and are
@@ -91,13 +99,17 @@ export default function Rice() {
         {/* Right Column */}
         <div>
           <div className="flex gap-3">
-            <img src={Grainicon} alt="grain" className="  w-12 -ml-[60px]  " />
-            <h3 className="text-[#4BAF47] font-extrabold text-[20px] mb-4">
+            <img
+              src={Grainicon}
+              alt="grain"
+              className="w-8 sm:w-10 md:w-12 -ml-8 sm:-ml-12 md:-ml-[60px]"
+            />
+            <h3 className="text-[#4BAF47] font-extrabold text-base sm:text-lg md:text-xl lg:text-[20px] lg:mb-4 mb-2">
               Manufacturing Process
             </h3>
           </div>
 
-          <p className="text-[14px] font-medium text-[#878680] leading-relaxed text-justify">
+          <p className="text-xs sm:text-sm font-medium text-[#878680] leading-relaxed text-justify">
             Our Carbon is manufactured from selected Rice Husk using a steam/air
             activation technique. The husks are first carbonized and the
             carbonized material is fed into a rotary kiln & reaction with
