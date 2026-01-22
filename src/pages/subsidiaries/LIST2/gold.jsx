@@ -5,15 +5,17 @@ import Truck from "../../../assets/icons/goldtruk.svg";
 
 export default function Gold() {
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-[1300px] mx-auto px-[100px]">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <section className="bg-white pb-8 sm:py-12 md:py-16">
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[100px]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-10 gap-3">
           {/* LEFT COLUMN */}
           <div className="space-y-6">
             {/* Categories */}
-            <div className="bg-[#fafaf2] rounded-xl p-12">
-              <h3 className="font-extrabold text-gray-900 mb-4">Categories</h3>
-              <ul className="space-y-6 text-[16px] font-semibold text-gray-600">
+            <div className="bg-[#fafaf2] rounded-xl p-4 sm:p-6 md:p-8 lg:p-12">
+              <h3 className="font-extrabold text-gray-900 mb-4 text-sm sm:text-base md:text-lg">
+                Categories
+              </h3>
+              <ul className="space-y-4 sm:space-y-6 text-sm sm:text-base font-semibold text-gray-600">
                 <li>Tiamin Gold</li>
                 <li>Tiamin Jewelleries</li>
                 <li>Gold Products</li>
@@ -24,27 +26,27 @@ export default function Gold() {
 
             {/* UAE Office Card */}
             <div
-              className="relative overflow-hidden rounded-xl text-white px-6 py-12  "
+              className="relative overflow-hidden rounded-xl text-white px-4 sm:px-6 py-8 sm:py-12 lg:block hidden"
               style={{
                 backgroundImage: `url(${goldbg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
-              <div className="absolute inset-0 opacity-10  " />
+              <div className="absolute inset-0 opacity-10" />
 
-              <div className="relative z-10 flex flex-col  place-items-center  ">
-                <h3 className="font-semibold mb-8 flex items-center gap-2">
+              <div className="relative z-10 flex flex-col place-items-center">
+                <h3 className="font-semibold mb-4 sm:mb-6 md:mb-8 flex items-center gap-2 text-sm sm:text-base">
                   UAE
                   <img
                     src="https://flagcdn.com/48x36/eh.png"
                     alt="UAE Flag"
-                    className="w-6 h-4"
+                    className="w-4 sm:w-6 h-3 sm:h-4"
                   />
                   Office:
                 </h3>
 
-                <p className="text-[14px] leading-[30px] text-[#C3F5C1] font-medium text-center mb-4">
+                <p className="text-xs sm:text-sm leading-relaxed sm:leading-[30px] text-[#C3F5C1] font-medium text-center mb-4">
                   TIAMIN Gold & General Trading LLC
                   <br />
                   402, Sheikh Hasher Building, Naif Street,
@@ -54,11 +56,11 @@ export default function Gold() {
                   Emirates P.O. Box 71426
                 </p>
 
-                <p className="font-semibold mb-6 text-[28px]">
+                <p className="font-semibold mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl lg:text-[28px]">
                   Tel: +971 525825838
                 </p>
 
-                <button className="bg-[#f4c430] text-[#ffffff] px-12 py-5 rounded-md text-[14px] font-bold hover:bg-yellow-500 transition">
+                <button className="bg-[#f4c430] text-[#ffffff] px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-md text-xs sm:text-sm font-bold hover:bg-yellow-500 transition">
                   Contact us now
                 </button>
               </div>
@@ -66,7 +68,7 @@ export default function Gold() {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 lg:space-y-8 space-y-4">
             {/* Image */}
             <div className="relative">
               <img
@@ -82,7 +84,7 @@ export default function Gold() {
             </div>
 
             {/* Text Content */}
-            <div className="space-y-6 text-[16px] text-[#878680] font-medium text-justify leading-[27px] ">
+            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-[#878680] font-medium text-justify leading-relaxed sm:leading-[27px]">
               <p>
                 Tiamin Gold & Jewelleries have a highly experienced professional
                 skilled team that can handle sale, purchase, export, import of
@@ -141,6 +143,48 @@ export default function Gold() {
                 As our desire is to serve our customers loyally and sincerely;
                 purity and commitment has always been our primary focus.
               </p>
+
+            </div>
+            {/* UAE Office Card */}
+            <div
+              className="relative overflow-hidden rounded-xl text-white px-4 sm:px-6 py-8 sm:py-12  lg:hidden"
+              style={{
+                backgroundImage: `url(${goldbg})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 opacity-10" />
+
+              <div className="relative z-10 flex flex-col place-items-center">
+                <h3 className="font-semibold mb-4 sm:mb-6 md:mb-8 flex items-center gap-2 text-sm sm:text-base">
+                  UAE
+                  <img
+                    src="https://flagcdn.com/48x36/eh.png"
+                    alt="UAE Flag"
+                    className="w-4 sm:w-6 h-3 sm:h-4"
+                  />
+                  Office:
+                </h3>
+
+                <p className="text-xs sm:text-sm leading-relaxed sm:leading-[30px] text-[#C3F5C1] font-medium text-center mb-4">
+                  TIAMIN Gold & General Trading LLC
+                  <br />
+                  402, Sheikh Hasher Building, Naif Street,
+                  <br />
+                  Al Dhagaya, Deira – Dubai, United Arab
+                  <br />
+                  Emirates P.O. Box 71426
+                </p>
+
+                <p className="font-semibold mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl lg:text-[28px]">
+                  Tel: +971 525825838
+                </p>
+
+                <button className="bg-[#f4c430] text-[#ffffff] px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 rounded-md text-xs sm:text-sm font-bold hover:bg-yellow-500 transition">
+                  Contact us now
+                </button>
+              </div>
             </div>
           </div>
         </div>

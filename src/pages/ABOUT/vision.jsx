@@ -18,7 +18,7 @@ export default function Vision() {
   }, []);
 
   return (
-    <div className="relative w-full bg-[#F8F7F0] overflow-hidden text-white py-14">
+    <div className="relative w-full bg-[#F8F7F0] overflow-hidden text-white py-8 md:py-14">
       {" "}
       {/* MAIN SLIDER */}
       <div
@@ -27,13 +27,13 @@ export default function Vision() {
       >
         {/* SLIDE 1 */}
         <div className="w-full flex-none flex items-center px-4">
-          <div className="grid grid-cols-2  gap-28 max-w-[1200px] mx-auto px-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-28 max-w-[1200px] mx-auto px-4 md:px-10">
             {/* Vision */}
-            <div className="space-y-3 px-10">
-              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
+            <div className="space-y-3 px-4 md:px-10">
+              <h2 className="text-2xl md:text-3xl lg:text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
                 Our Vision
               </h2>
-              <p className="text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
+              <p className="text-sm md:text-base lg:text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
                 We aim to establish ourselves as a brand by providing superior
                 quality products and best services. This is to be done by
                 strengthening business relations with stakeholders that include
@@ -45,11 +45,11 @@ export default function Vision() {
             </div>
 
             {/* Mission */}
-            <div className="space-y-3 px-10">
-              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 sm:gap-4">
+            <div className="space-y-3 px-4 md:px-10">
+              <h2 className="text-2xl md:text-3xl lg:text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 sm:gap-4">
                 Our Mission
               </h2>
-              <p className="text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
+              <p className="text-sm md:text-base lg:text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
                 Use the most appropriate technical capabilities and skills
                 required to become a leader in the rice business alongside other
                 agricultural commodity chain. As one of the nations leading rice
@@ -66,14 +66,14 @@ export default function Vision() {
         {/* SLIDE 2 */}
 
         <div className="w-full flex-none flex items-center px-4">
-          <div className="grid grid-cols-2 gap-28 max-w-[1200px] mx-auto px-10 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-28 max-w-[1200px] mx-auto px-4 md:px-10 ">
             {/* corporate */}
-            <div className="space-y-3 px-10 ">
-              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
+            <div className="space-y-3 px-4 md:px-10 ">
+              <h2 className="text-2xl md:text-3xl lg:text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
                 Corporate Values
               </h2>
               <div className="space-y-3">
-                <p className="text-[16px] leading-relaxed font-bold text-[#878680] text-justify">
+                <p className="text-sm md:text-base lg:text-[16px] leading-relaxed font-bold text-[#878680] text-justify">
                   Excellence:{" "}
                   <span className="font-medium">
                     {" "}
@@ -81,7 +81,7 @@ export default function Vision() {
                     innovation in all aspects of our operations.{" "}
                   </span>
                 </p>
-                <p className="text-[16px] leading-relaxed font-bold text-[#878680] text-justify">
+                <p className="text-sm md:text-base lg:text-[16px] leading-relaxed font-bold text-[#878680] text-justify">
                   Integrity:{" "}
                   <span className="font-medium">
                     We uphold the highest ethical standards and principles,
@@ -89,7 +89,7 @@ export default function Vision() {
                     stakeholders and partners.
                   </span>
                 </p>
-                <p className="text-[16px] leading-relaxed font-bold text-[#878680]">
+                <p className="text-sm md:text-base lg:text-[16px] leading-relaxed font-bold text-[#878680]">
                   Environmental Responsibility:{" "}
                   <span className="font-medium">
                     {" "}
@@ -101,11 +101,11 @@ export default function Vision() {
             </div>
 
             {/* social */}
-            <div className="space-y-3 px-10 ">
-              <h2 className="text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
+            <div className="space-y-3 px-4 md:px-10 ">
+              <h2 className="text-2xl md:text-3xl lg:text-[38px] font-extrabold text-[#4BAF47] flex items-center gap-2 ">
                 Social Responsibility
               </h2>
-              <p className="text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
+              <p className="text-sm md:text-base lg:text-[16px] leading-relaxed font-medium text-[#878680] text-justify">
                 We actively seek ways to give back to our community, supporting
                 causes related to health, education, and environmental
                 sustainability.

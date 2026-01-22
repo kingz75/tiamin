@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import Img1 from "../../../assets/images/img1.jpg";
 import Img2 from "../../../assets/images/img2.jpg";
 import Img3 from "../../../assets/images/img3.jpg";
@@ -14,39 +13,46 @@ import Img10 from "../../../assets/images/img10.jpg";
 import Img11 from "../../../assets/images/img11.jpg";
 import Img12 from "../../../assets/images/img12.jpg";
 
-
 function ImageCard({ img }) {
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden self-start">
-      <img src={img} alt="" className="w-full h-64 object-cover" />
+      <img
+        src={img}
+        alt=""
+        className="w-full h-48 sm:h-56 md:h-64 object-cover"
+      />
     </div>
   );
 }
-
 
 function GalleryCard({ img, title }) {
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden text-center">
-      <div className="p-4">
-        <h4 className="text-[16px] font-extrabold text-gray-800">{title}</h4>
+      <div className="p-2 sm:p-3 md:p-4">
+        <h4 className="text-sm sm:text-base md:text-lg lg:text-[16px] font-extrabold text-gray-800">
+          {title}
+        </h4>
       </div>
-      <img src={img} alt={title} className="w-full h-56 object-cover" />
+      <img
+        src={img}
+        alt={title}
+        className="w-full h-40 sm:h-48 md:h-56 object-cover"
+      />
     </div>
   );
 }
-
 /*Main Section */
 export default function GallerySection() {
   return (
-    <section className="py-16 px-20">
-      <div className="max-w-7xl mx-auto space-y-20">
+    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 lg:px-20">
+      <div className="max-w-7xl mx-auto space-y-10 sm:space-y-16 md:space-y-20">
         {/* Row 1 */}
-        <div className="grid lg:grid-cols-[280px_1fr] gap-8 items-center">
-          <h3 className="text-[#4BAF47] font-extrabold text-[30px] leading-[45px]">
+        <div className="grid lg:grid-cols-[280px_1fr] gap-4 sm:gap-6 md:gap-8 items-center">
+          <h3 className="text-[#4BAF47] font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-[30px] leading-tight sm:leading-[40px] md:leading-[45px]">
             Precleaning, Parboiling & Milling Unit
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <GalleryCard img={Img1} title="Quality Standards" />
             <GalleryCard img={Img2} title="Organic Farming" />
             <GalleryCard img={Img3} title="Agriculture Products" />
@@ -54,12 +60,12 @@ export default function GallerySection() {
         </div>
 
         {/* Row 2 */}
-        <div className="grid lg:grid-cols-[280px_1fr] gap-8 items-center">
-          <h3 className="text-[#4BAF47] font-extrabold text-[30px] leading-[45px]">
+        <div className="grid lg:grid-cols-[280px_1fr] gap-4 sm:gap-6 md:gap-8 items-center">
+          <h3 className="text-[#4BAF47] font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-[30px] leading-tight sm:leading-[40px] md:leading-[45px]">
             Equitorial Guinea Ambassador’s visit to Bauchi
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <ImageCard img={Img4} />
             <ImageCard img={Img5} />
             <ImageCard img={Img6} />
@@ -67,12 +73,12 @@ export default function GallerySection() {
         </div>
 
         {/* Row 3 */}
-        <div className="grid lg:grid-cols-[280px_1fr] gap-8 items-center">
-          <h3 className="text-[#4BAF47] font-extrabold text-[30px] leading-[45px]">
+        <div className="grid lg:grid-cols-[280px_1fr] gap-4 sm:gap-6 md:gap-8 items-center">
+          <h3 className="text-[#4BAF47] font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-[30px] leading-tight sm:leading-[40px] md:leading-[45px]">
             Farm Pictures Visits to the Rice Mill in Bauchi:
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <ImageCard img={Img7} />
             <ImageCard img={Img8} />
             <ImageCard img={Img9} />
@@ -80,12 +86,12 @@ export default function GallerySection() {
         </div>
 
         {/* Row 4 */}
-        <div className="grid lg:grid-cols-[280px_1fr] gap-8 items-center">
-          <h3 className="text-[#4BAF47] font-extrabold text-[30px] leading-[45px] ">
+        <div className="grid lg:grid-cols-[280px_1fr] gap-4 sm:gap-6 md:gap-8 items-center">
+          <h3 className="text-[#4BAF47] font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-[30px] leading-tight sm:leading-[40px] md:leading-[45px]">
             Tripartite MOU with RIFAN and the Egyptian Government
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <ImageCard img={Img10} />
             <ImageCard img={Img11} />
             <ImageCard img={Img12} />

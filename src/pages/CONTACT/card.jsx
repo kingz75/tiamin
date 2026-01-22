@@ -1,6 +1,6 @@
 export default function CardSection() {
   return (
-    <div className="w-full flex justify-center bg-[#ffffff] py-8 sm:py-10">
+    <div className="w-full flex justify-center bg-[#ffffff] lg:py-8 pt-6 sm:py-10">
       <div className="max-w-[1370px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] w-full grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
         {/* ABOUT */}
         <div className="bg-[#4BAF47] text-[#ffffff] p-4 sm:p-6 rounded-md text-sm sm:text-base lg:text-[16px] font-semibold">

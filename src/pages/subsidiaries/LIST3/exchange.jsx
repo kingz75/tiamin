@@ -2,17 +2,17 @@ import React from "react";
 
 export default function TCXOverview() {
   return (
-    <section className="w-full bg-white pt-4 pb-20">
-      <div className="max-w-[1400px] mx-auto px-[100px]">
-        <div className="grid grid-cols-1 lg:grid-cols-7 gap-14">
+    <section className="w-full bg-white lg:pt-4 pb-20">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[100px]">
+        <div className="grid grid-cols-1 lg:grid-cols-7 gap-8 sm:gap-10 md:gap-12 lg:gap-14">
           {/* LEFT CONTENT */}
           <div className="lg:col-span-4">
-            <h1 className="text-[38px] font-extrabold text-[#4BAF47] leading-[50px] mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[38px] font-extrabold text-[#4BAF47] leading-tight sm:leading-[40px] md:leading-[45px] lg:leading-[50px] mb-6">
               Tiamin Commodity Exchange <br />
               (TCX) (Upcoming Venture)
             </h1>
 
-            <div className="space-y-6 text-[16px] text-[#878680] font-medium text-justify leading-[27px]">
+            <div className="space-y-4 sm:space-y-5 md:space-y-6 text-[16px] text-[#878680] font-medium text-justify leading-[27px]">
               <p>
                 The Tiamin Commodity Exchange is a private company limited by
                 shares that is incorporated to establish linkages between
@@ -59,11 +59,11 @@ export default function TCXOverview() {
 
             {/* OPERATIONS */}
             <div className="mt-8">
-              <h2 className="text-[28px] font-extrabold text-[#4BAF47] mb-4">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[28px] font-extrabold text-[#4BAF47] lg:mb-4 mb-2">
                 TCX business operations consist of:
               </h2>
 
-              <ul className="space-y-4 text-[16px] text-[#878680] font-medium text-justify leading-[27px]">
+              <ul className="space-y-3 sm:space-y-4 text-[16px] text-[#878680] font-medium text-justify leading-[27px]">
                 <li>
                   (1) a trading platform powered by a provider Trading system,
                   and
@@ -78,7 +78,7 @@ export default function TCXOverview() {
 
             {/* PRICE DISCOVERY */}
             <div className="mt-8">
-              <h2 className="text-[28px] font-extrabold text-[#4BAF47] mb-3">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[28px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
                 Price Discovery
               </h2>
 
@@ -95,7 +95,7 @@ export default function TCXOverview() {
 
             {/* WAREHOUSING */}
             <div className="mt-8">
-              <h2 className="text-[28px] font-extrabold text-[#4BAF47] mb-3">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[28px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
                 Warehousing Operations
               </h2>
 
@@ -112,10 +112,10 @@ export default function TCXOverview() {
           </div>
 
           {/* RIGHT SIDEBAR */}
-          <aside className="bg-[#F8F7F0] rounded-2xl px-8 py-14 space-y-10 lg:col-span-3">
+          <aside className="bg-[#F8F7F0] rounded-2xl px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-14 space-y-6 sm:space-y-8 md:space-y-10 lg:col-span-3">
             {/* VISION */}
             <div>
-              <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[20px] font-extrabold text-[#4BAF47] mb-2">
                 Our Vision
               </h3>
               <p className="text-[16px] text-[#878680] font-semibold text-justify leading-[27px]">
@@ -139,11 +139,11 @@ export default function TCXOverview() {
 
             {/* OBJECTIVES */}
             <div>
-              <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-3">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[20px] font-extrabold text-[#4BAF47] mb-2 sm:mb-3">
                 Objectives
               </h3>
 
-              <ul className="space-y-4 text-[16px] text-[#878680] font-semibold text-justify leading-[27px]">
+              <ul className="space-y-3 sm:space-y-4 text-[16px] text-[#878680] font-semibold text-justify leading-[27px]">
                 <li>
                   To provide an efficient and risk free trading solutions that
                   supports spots and forward trading.
@@ -180,7 +180,7 @@ export default function TCXOverview() {
                 Our Services
               </h3>
 
-              <ul className="space-y-2 text-[16px] text-[#878680] font-semibold leading-">
+              <ul className="space-y-1 sm:space-y-2 text-[16px] text-[#878680] font-semibold leading-">
                 <li>Secure Storage with Grain Testing Facilities</li>
                 <li>Grading to Meet National and International Standards</li>
                 <li>Reliable, Fair and Transparent Price Discovery Process</li>
@@ -195,7 +195,7 @@ export default function TCXOverview() {
                 Our Services
               </h3>
 
-              <ul className="space-y-2 text-[16px] text-[#878680] font-semibold">
+              <ul className="space-y-1 sm:space-y-2 text-[16px] text-[#878680] font-semibold">
                 <li>• Market Data</li>
                 <li>• Commodities</li>
                 <li>• Realtime Price of Market Information</li>
@@ -203,7 +203,8 @@ export default function TCXOverview() {
                 <li>• Capacity Building for Farmers, Traders</li>
                 <li>• Market Actors Linkages and</li>
                 <li>
-                  • Sourcing Grain from the entire West Africa and even Global Community Market
+                  • Sourcing Grain from the entire West Africa and even Global
+                  Community Market
                 </li>
               </ul>
             </div>
