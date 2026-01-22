@@ -10,7 +10,7 @@ import Overview2 from "./ABOUT/overview2";
 export default function About() {
   return (
     <div>
-      <div className="font-Montserrat">
+      <div className="font-Montserrat mt-32 lg:mt-0">
         <Abouthero />
         <Knowus />
         <Vision />

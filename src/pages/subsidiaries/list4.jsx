@@ -7,7 +7,7 @@ import Air from "./LIST4/air";
 
 const List3 = () => {
   return (
-    <div>
+    <div className="mt-32 lg:mt-0 font-Montserrat">
       <Hero />
       <Air/>
       <Project/> 

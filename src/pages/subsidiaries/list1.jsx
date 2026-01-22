@@ -8,7 +8,7 @@ import Discover from "./LIST1/discover";
 
 const List1 = () => {
   return (
-    <div>
+    <div className="mt-32 lg:mt-0 font-Montserrat">
       <Hero />
       <Rice />
       <Logo/>

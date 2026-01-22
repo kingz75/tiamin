@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 
 // MAIN PAGES
 
-import Home from "./pages/HOME/Home";
+// import Home from "./pages/HOME/Home";
 import About from "./pages/About";
 
 //import Careers from "./pages/Gallery";
@@ -34,7 +34,7 @@ export default function App() {
         <Routes>
           {/* Main Routes */}
 
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
 
           <Route path="/about" element={<About />} />
           {/*}

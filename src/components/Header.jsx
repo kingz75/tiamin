@@ -10,7 +10,7 @@ import { CiSearch } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Call from "../assets/icons/callicon.svg";
 import Mainicon from "../assets/icons/mainicon.svg";
@@ -22,13 +22,21 @@ export default function Header() {
   const [mobileSubsOpen, setMobileSubsOpen] = useState(false);
   const isProjectActive = location.pathname.startsWith("/subsidiaries");
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [menuOpen]);
+
   const navClass = ({ isActive }) =>
     `hover:text-yellow-400 ${
       isActive ? "text-yellow-400 font-extrabold" : " "
     }`;
 
   return (
-    <header className="py-[5px] px-4 lg:px-[60px] bg-cover bg-center z-50 relative ">
+    <header className="fixed md:static top-0 left-0 right-0 z-50 py-[5px] px-4 lg:px-[60px] bg-cover bg-center">
       <div className="max-w-[1370px] mx-auto gap-10 flex items-center justify-between text-white">
         {/* Left section: Logo + Socials */}
         <div className="flex items-center gap-24">
@@ -80,7 +88,7 @@ export default function Header() {
           {/* Subsidiaries Dropdown */}
 
           <div
-            className={`relative ${projectOpen ? "min-h-[200px]" : ""}`}
+            className={`relative ${projectOpen ? "min-h-[px]" : ""}`}
             onMouseEnter={() => setProjectOpen(true)}
             onMouseLeave={() => setProjectOpen(false)}
           >
@@ -203,118 +211,127 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white/10 backdrop-blur-[10px] rounded-b-2xl shadow-lg z-50">
-          <nav className="flex flex-col items-start gap-4 py-4 px-4 text-[#ffffff99] ">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `hover:text-[#FAA419] ${isActive ? "text-[#FAA419] font-bold" : ""}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </NavLink>
-            <NavLink
-              to="/gallery"
-              className={({ isActive }) =>
-                `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              Gallery
-            </NavLink>
-
-            {/* Subsidiaries Dropdown */}
-            <div className="flex flex-col items-start">
-              <span
-                className={`flex items-center gap-1 cursor-pointer ${
-                  isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
-                }`}
-                onClick={() => setMobileSubsOpen(!mobileSubsOpen)}
+        <>
+          <div
+            className="fixed top-full left-0 right-0 bottom-0 z-40"
+            onClick={() => setMenuOpen(false)}
+          ></div>
+          <div
+            className="lg:hidden absolute top-full left-0 w-full bg-white/10 backdrop-blur-md rounded-b-2xl shadow-lg z-50"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <nav className="flex flex-col items-start gap-4 py-4 px-4 text-[#ffffff99] ">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419] font-bold" : ""}`
+                }
+                onClick={() => setMenuOpen(false)}
               >
-                Subsidiaries{" "}
-                {mobileSubsOpen ? (
-                  <FaChevronUp size={12} />
-                ) : (
-                  <FaChevronDown size={12} />
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/gallery"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                Gallery
+              </NavLink>
+
+              {/* Subsidiaries Dropdown */}
+              <div className="flex flex-col items-start">
+                <span
+                  className={`flex items-center gap-1 cursor-pointer ${
+                    isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                  }`}
+                  onClick={() => setMobileSubsOpen(!mobileSubsOpen)}
+                >
+                  Subsidiaries{" "}
+                  {mobileSubsOpen ? (
+                    <FaChevronUp size={12} />
+                  ) : (
+                    <FaChevronDown size={12} />
+                  )}
+                </span>
+
+                {mobileSubsOpen && (
+                  <div className="flex flex-col items-start gap-2 mt-2 ml-4">
+                    <NavLink
+                      to="/subsidiaries/list1"
+                      className="text-[#ffffff99] hover:text-[#ffffff]"
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setMobileSubsOpen(false);
+                      }}
+                    >
+                      Tiamin Rice Limited
+                    </NavLink>
+                    <NavLink
+                      to="/subsidiaries/list2"
+                      className="text-[#ffffff99] hover:text-[#ffffff]"
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setMobileSubsOpen(false);
+                      }}
+                    >
+                      Tiamin Gold & Jewelleries LCC
+                    </NavLink>
+                    <NavLink
+                      to="/subsidiaries/list3"
+                      className="text-[#ffffff99] hover:text-[#ffffff]"
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setMobileSubsOpen(false);
+                      }}
+                    >
+                      Tiamin Commodity Exchange
+                    </NavLink>
+                    <NavLink
+                      to="/subsidiaries/list4"
+                      className="text-[#ffffff99] hover:text-[#ffffff]"
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setMobileSubsOpen(false);
+                      }}
+                    >
+                      Tiamin Air
+                    </NavLink>
+                  </div>
                 )}
-              </span>
+              </div>
 
-              {mobileSubsOpen && (
-                <div className="flex flex-col items-start gap-2 mt-2 ml-4">
-                  <NavLink
-                    to="/subsidiaries/list1"
-                    className="text-[#ffffff99] hover:text-[#ffffff]"
-                    onClick={() => {
-                      setMenuOpen(false);
-                      setMobileSubsOpen(false);
-                    }}
-                  >
-                    Tiamin Rice Limited
-                  </NavLink>
-                  <NavLink
-                    to="/subsidiaries/list2"
-                    className="text-[#ffffff99] hover:text-[#ffffff]"
-                    onClick={() => {
-                      setMenuOpen(false);
-                      setMobileSubsOpen(false);
-                    }}
-                  >
-                    Tiamin Gold & Jewelleries LCC
-                  </NavLink>
-                  <NavLink
-                    to="/subsidiaries/list3"
-                    className="text-[#ffffff99] hover:text-[#ffffff]"
-                    onClick={() => {
-                      setMenuOpen(false);
-                      setMobileSubsOpen(false);
-                    }}
-                  >
-                    Tiamin Commodity Exchange
-                  </NavLink>
-                  <NavLink
-                    to="/subsidiaries/list4"
-                    className="text-[#ffffff99] hover:text-[#ffffff]"
-                    onClick={() => {
-                      setMenuOpen(false);
-                      setMobileSubsOpen(false);
-                    }}
-                  >
-                    Tiamin Air
-                  </NavLink>
-                </div>
-              )}
-            </div>
-
-            <NavLink
-              to="/shop"
-              className={({ isActive }) =>
-                `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              Shop
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
-              }
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </NavLink>
-          </nav>
-        </div>
+              <NavLink
+                to="/shop"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                Shop
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `hover:text-[#FAA419] ${isActive ? "text-[#FAA419]" : ""}`
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </NavLink>
+            </nav>
+          </div>
+        </>
       )}
     </header>
   );
