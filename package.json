@@ -24,7 +24,7 @@
     "react-webcam": "^7.2.0",
     "recharts": "^2.15.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.5",
+    "swiper": "^11.2.10",
     "xlsx": "^0.18.5"
   },
   "scripts": {

@@ -12,11 +12,12 @@ import Footer from "./components/Footer";
 
 // MAIN PAGES
 
-import Home from "./pages/HOME/Home";
+import Home from "./pages/Home";
 import About from "./pages/About";
+import GalleryPage from "./pages/GalleryPage";
 
 //import Careers from "./pages/Gallery";
-//import Shop from "./pages/Shop";
+import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
 
 import List1 from "./pages/subsidiaries/list1";
@@ -37,12 +38,12 @@ export default function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/about" element={<About />} />
-          {/*}
 
-          <Route path="/careers" element={<Careers />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+
+          {/* <Route path="/careers" element={<Careers />} /> */}
 
           <Route path="/shop" element={<Shop />} />
-          */}
 
           <Route path="/contact" element={<Contact />} />
 
@@ -52,7 +53,7 @@ export default function App() {
           <Route path="/subsidiaries/list2" element={<List2 />} />
           <Route path="/subsidiaries/list3" element={<List3 />} />
           <Route path="/subsidiaries/list4" element={<List4 />} />
-          
+
         </Routes>
 
         <Footer />

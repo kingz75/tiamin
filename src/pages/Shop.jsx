@@ -1,14 +1,16 @@
 import React from 'react';
-import Newshero from './SHOP/newshero';
-import Card from './SHOP/card';
+import ShopHero from './SHOP/ShopHero';
+import ShopContent from './SHOP/ShopContent';
+import ShopReview from './SHOP/ShopReview';
 
-export default function News() {
+export default function Shop() {
 	return (
-		<div>
-			<div className="font-Montserrat">
-				<Newshero />
-				<Card />
+		<div className="">
+			<ShopHero />
+			<div className="mt-8">
+				<ShopContent />
 			</div>
+			<ShopReview />
 		</div>
 	);
 }

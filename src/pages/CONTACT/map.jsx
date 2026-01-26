@@ -1,7 +1,7 @@
 import Mapbg from "../../assets/back/mapbg.jpg";
 export default function Map() {
   return (
-    <div className="w-full flex justify-center py-8 sm:py-10 bg-white max-w-[1370px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px]">
+    <div className="w-full flex justify-center py-8 sm:py-10 bg-white max-w-[1370px] mx-auto px-4 sm:px-8 md:px-12 lg:px-[100px]">
       <div className="w-full  rounded-lg grid grid-cols-1 md:grid-cols-2 overflow-hidden">
         {/* RIGHT — FORM */}
         <div
