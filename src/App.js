@@ -35,7 +35,7 @@ export default function App() {
         <Routes>
           {/* Main Routes */}
 
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
 
           <Route path="/about" element={<About />} />
 

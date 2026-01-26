@@ -7,7 +7,7 @@ import Exchange from "./LIST3/exchange";
 
 const List3 = () => {
   return (
-    <div>
+    <div className="mt-32 lg:mt-0 font-Montserrat">
       <Hero />
       <Exchangelogo/>
       <Exchange/>

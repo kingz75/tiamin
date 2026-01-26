@@ -158,7 +158,7 @@ export default function Footer() {
 
       {/* COPYRIGHT SECTION */}
       <div className="bg-[#1A1A1A] ">
-        <div className="text-[#A5A49A] text-center py-4 text-sm flex justify-between max-w-[1370px] mx-auto px-[100px]">
+        <div className="text-[#A5A49A] text-center py-4 lg:text-sm text-[12px]  flex justify-between max-w-[1370px] mx-auto lg:px-[100px] px-2">
           <div>© All Copyright 2025 by Tiamin Groups</div>
           <div>Terms of Use l Privacy Policy</div>
         </div>

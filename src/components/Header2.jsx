@@ -8,7 +8,7 @@ const Header2 = () => {
   const [mobileSubsOpen, setMobileSubsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="fixed md:static top-0 left-0 right-0 z-50">
       <Colour />
       <Top menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Head
