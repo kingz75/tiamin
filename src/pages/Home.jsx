@@ -10,7 +10,7 @@ import FarmEvents from './HOME/farmEvents'
 import Map from './CONTACT/map'
 export default function Home() {
     return (
-        <div style={{ marginTop: '-90px' }}>
+        <div className='font-Manrope md:-mt-[90px]'>
             <HeroSection />
             <SectionTwo />
             <Leadership />

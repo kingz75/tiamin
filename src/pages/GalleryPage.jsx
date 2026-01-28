@@ -117,7 +117,7 @@ export default function GalleryPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 lg:mt-0 mt-28 to-white">
             {/* Hero Section - matching About page style */}
             <div
                 className="relative px-4 lg:px-[100px] bg-cover bg-center items-center flex -mt-9 h-[200px] md:h-[250px] lg:h-[300px] justify-center"

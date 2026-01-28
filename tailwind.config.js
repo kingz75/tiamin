@@ -3,7 +3,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
+				manrope: ['Manrope', 'sans-serif'],
 				Montserrat: ['Montserrat', 'sans-serif'],
+				sans: ['Manrope', 'Montserrat', 'sans-serif'],
 			},
 			keyframes: {
 				parallax: {

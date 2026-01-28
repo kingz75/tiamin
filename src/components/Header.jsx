@@ -31,12 +31,11 @@ export default function Header() {
   }, [menuOpen]);
 
   const navClass = ({ isActive }) =>
-    `hover:text-yellow-400 ${
-      isActive ? "text-yellow-400 font-extrabold" : " "
+    `hover:text-yellow-400 ${isActive ? "text-yellow-400 font-extrabold" : " "
     }`;
 
   return (
-    <header className="fixed md:static top-0 left-0 right-0 z-50 py-[5px] px-4 lg:px-[60px] bg-cover bg-center">
+    <header className="fixed md:relative   top-0 left-0 right-0 z-[100] py-[5px] px-4 lg:px-[60px] bg-cover bg-center">
       <div className="max-w-[1370px] mx-auto gap-10 flex items-center justify-between text-white">
         {/* Left section: Logo + Socials */}
         <div className="flex items-center gap-24">
@@ -93,9 +92,8 @@ export default function Header() {
             onMouseLeave={() => setProjectOpen(false)}
           >
             <span
-              className={`flex items-center gap-1 cursor-pointer ${
-                isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
-              }`}
+              className={`flex items-center gap-1 cursor-pointer ${isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                }`}
             >
               Subsidiaries{" "}
               {projectOpen ? (
@@ -252,9 +250,8 @@ export default function Header() {
               {/* Subsidiaries Dropdown */}
               <div className="flex flex-col items-start">
                 <span
-                  className={`flex items-center gap-1 cursor-pointer ${
-                    isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
-                  }`}
+                  className={`flex items-center gap-1 cursor-pointer ${isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                    }`}
                   onClick={() => setMobileSubsOpen(!mobileSubsOpen)}
                 >
                   Subsidiaries{" "}

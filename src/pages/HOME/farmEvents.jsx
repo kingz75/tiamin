@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -13,16 +14,17 @@ import img5 from '../../assets/tiamin-photo/33.jpg';
 
 const FarmEvents = () => {
     const swiperRef = useRef(null);
+    const navigate = useNavigate();
 
     const images = [img1, img2, img3, img4, img5];
 
     return (
         <section className="py-16 max-w-7xl mx-auto px-4 bg-white overflow-hidden">
             <div className=" text-center mb-12">
-                <p className="text-[#D4AF37] font-medium italic mb-2" style={{ fontFamily: 'Dancing Script, cursive', fontSize: '1.5rem' }}>
+                <p className="text-[#EEC044] font-medium mb-2" style={{ fontFamily: '"Covered By Your Grace", cursive', fontSize: '1.5rem' }}>
                     From our Galleries
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A]">
+                <h2 className="text-4xl lg:text-[48px] font-extrabold text-[#1F1E17]">
                     Farm & Events
                 </h2>
             </div>
@@ -56,7 +58,7 @@ const FarmEvents = () => {
                 >
                     {images.map((img, index) => (
                         <SwiperSlide key={index}>
-                            <div className="rounded-2xl overflow-hidden h-[450px] md:h-[500px] shadow-lg">
+                            <div className="rounded-2xl overflow-hidden h-[400px] md:h-[500px] shadow-lg">
                                 <img
                                     src={img}
                                     alt={`Farm and Event ${index + 1}`}
@@ -72,7 +74,10 @@ const FarmEvents = () => {
             </div>
 
             <div className="flex justify-center mt-4">
-                <button className="bg-[#4CAF50] text-white px-10 py-3 rounded-full font-semibold text-lg hover:bg-[#45a049] transition-colors duration-300 shadow-md">
+                <button
+                    onClick={() => navigate('/gallery')}
+                    className="bg-[#4BAF47] text-white px-10 py-3 rounded-2xl font-semibold text-lg hover:bg-[#45a049] transition-colors duration-300 shadow-md"
+                >
                     View more
                 </button>
             </div>

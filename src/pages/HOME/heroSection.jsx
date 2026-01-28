@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Import hero images
 import hero1 from '../../assets/images/hero1.jpg';
@@ -25,6 +26,7 @@ const useWindowSize = () => {
 };
 
 export default function HeroSection() {
+    const navigate = useNavigate();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(true);
     const { width } = useWindowSize();
@@ -57,8 +59,8 @@ export default function HeroSection() {
         heroSection: {
             position: 'relative',
             width: '100%',
-            height: '100vh',
-            minHeight: isMobile ? '450px' : isTablet ? '500px' : '600px',
+            height: isMobile ? '100dvh' : '100vh',
+            minHeight: isMobile ? '100dvh' : isTablet ? '500px' : '600px',
             overflow: 'hidden',
             display: 'flex',
             alignItems: 'center',
@@ -103,7 +105,7 @@ export default function HeroSection() {
         // Subtitle - "Tiamin Group"
         heroSubtitle: {
             display: 'block',
-            fontFamily: "'Poppins', 'Segoe UI', sans-serif",
+            fontFamily: "'Manrope', sans-serif",
             fontSize: isMobile ? '0.875rem' : isTablet ? '1rem' : '1.25rem',
             fontWeight: 400,
             color: '#ffffff',
@@ -114,7 +116,7 @@ export default function HeroSection() {
 
         // Main Title Container
         heroTitle: {
-            fontFamily: "'Playfair Display', Georgia, serif",
+            fontFamily: "'Manrope', sans-serif",
             fontSize: isMobile ? '1.75rem' : isTablet ? '2.5rem' : '4rem',
             fontWeight: 700,
             lineHeight: 1.2,
@@ -150,11 +152,11 @@ export default function HeroSection() {
         heroButton: {
             display: 'inline-block',
             padding: isMobile ? '12px 24px' : isTablet ? '12px 28px' : '14px 36px',
-            fontFamily: "'Poppins', 'Segoe UI', sans-serif",
+            fontFamily: "'Manrope', sans-serif",
             fontSize: isMobile ? '0.875rem' : isTablet ? '0.9rem' : '1rem',
             fontWeight: 500,
             color: '#ffffff',
-            backgroundColor: '#4CAF50', // Green color
+            backgroundColor: '#4BAF47', // Green color
             border: 'none',
             borderRadius: '6px',
             cursor: 'pointer',
@@ -267,14 +269,15 @@ export default function HeroSection() {
                     </h1>
                     <button
                         style={styles.heroButton}
-                        className="hero-button-anim hero-button-hover"
+                        className="hero-button-anim text-[14px] hero-button-hover"
+                        onClick={() => navigate('/shop')}
                     >
                         Discover More
                     </button>
                 </div>
 
                 {/* Slide Navigation Indicators */}
-                <div style={styles.heroIndicators}>
+                {/* <div style={styles.heroIndicators}>
                     {heroImages.map((_, index) => (
                         <button
                             key={index}
@@ -289,7 +292,7 @@ export default function HeroSection() {
                             aria-label={`Go to slide ${index + 1}`}
                         />
                     ))}
-                </div>
+                </div> */}
             </section>
         </>
     );

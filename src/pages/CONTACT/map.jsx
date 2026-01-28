@@ -15,7 +15,7 @@ export default function Map() {
 
           {/* CONTENT */}
           <div className="relative z-10">
-            <p className="text-lg sm:text-xl lg:text-[24px] text-[#EEC044] mb-1">
+            <p className="text-lg sm:text-xl lg:text-[28px] text-[#EEC044] mb-1" style={{ fontFamily: '"Covered By Your Grace", cursive' }}>
               Contact us
             </p>
 

@@ -5,7 +5,7 @@ import ShopReview from './SHOP/ShopReview';
 
 export default function Shop() {
 	return (
-		<div className="">
+		<div className="lg:mt-0 mt-32">
 			<ShopHero />
 			<div className="mt-8">
 				<ShopContent />

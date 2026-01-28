@@ -80,7 +80,7 @@ export default function MissionSlider() {
                                 <div
                                     className={`transition-all duration-700 ease-out ${isActive
                                         ? "scale-105"
-                                        : "scale-100 opacity-80"
+                                        : "scale-100"
                                         }`}
                                 >
                                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -92,11 +92,11 @@ export default function MissionSlider() {
                                             />
                                         </div>
 
-                                        <div className="p-6">
-                                            <h3 className="font-semibold text-gray-900 mb-3 text-lg">
+                                        <div className="p-6 text-left">
+                                            <h3 className="font-extrabold text-[#1F1E17] mb-3 text-[22px]">
                                                 {item.title}
                                             </h3>
-                                            <p className="text-sm text-gray-600 leading-relaxed">
+                                            <p className="text-[12px] text-[#878680] leading-relaxed">
                                                 {item.text}
                                             </p>
                                         </div>

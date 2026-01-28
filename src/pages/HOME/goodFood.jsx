@@ -27,14 +27,14 @@ export default function GoodFood() {
                     {/* Green Card */}
                     <div className="w-full lg:w-auto">
                         <div className="mb-6 text-center lg:text-left">
-                            <p className="text-[#EEC044] text-[20px] lg:text-[24px] font-medium mb-2">
+                            <p className="text-[#EEC044] text-[20px] lg:text-[28px] font-medium mb-2" style={{ fontFamily: '"Covered By Your Grace", cursive' }}>
                                 Produce
                             </p>
                             <h2 className="text-3xl lg:text-[48px] font-extrabold text-[#1F1E17]">
                                 Naturally Good Food
                             </h2>
                         </div>
-                        <div className="bg-[#4BB145] text-white p-8 lg:p-[72px] w-full lg:max-w-[630px] text-center lg:text-left mx-auto">
+                        <div className="bg-[#4BB145] text-white p-6 lg:p-[72px] w-full lg:max-w-[630px] text-left mx-auto">
                             <h3 className="text-xl lg:text-[40px] font-bold leading-[43px] mb-4">
                                 Premium Rice from <br className="hidden sm:block" />
                                 <span className="text-[#FFCC00]">Nigeria’s</span>  Finest Fields
@@ -48,7 +48,7 @@ export default function GoodFood() {
                         </div></div>
 
                     {/* Product Image (NO GAP) */}
-                    <div className="w-full lg:w-auto flex justify-center lg:justify-start">
+                    <div className="w-full lg:w-auto hidden lg:flex justify-center lg:justify-start">
                         <img
                             src={riceBags}
                             alt="Tiamin Rice Products"
