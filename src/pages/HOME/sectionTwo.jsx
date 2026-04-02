@@ -1,20 +1,46 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import abtall from '../../assets/images/abtall.png'
-import abtImg2 from '../../assets/images/abtImg2.png'
-import abtImgsm from '../../assets/images/abtImgsmall.png'
+import sect1a from '../../assets/images/sect1b.png'
+import sect1b from '../../assets/images/sect1a.png'
 import abtbg from '../../assets/images/abt-bg.png'
 
 export default function SectionTwo() {
     const navigate = useNavigate();
     const leftRef = useRef(null)
     const [leftHeight, setLeftHeight] = useState(null)
+    const [count, setCount] = useState(0)
+    const [hasCounted, setHasCounted] = useState(false)
+    const counterRef = useRef(null)
 
     useEffect(() => {
         if (leftRef.current) {
             setLeftHeight(leftRef.current.offsetHeight)
         }
     }, [])
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const [entry] = entries;
+            if (entry.isIntersecting && !hasCounted) {
+                setHasCounted(true);
+                let start = 0;
+                const end = 20;
+                const duration = 2000;
+                const incrementTime = duration / end;
+                const timer = setInterval(() => {
+                    start += 1;
+                    setCount(start);
+                    if (start >= end) clearInterval(timer);
+                }, incrementTime);
+            }
+        }, { threshold: 0.5 });
+
+        if (counterRef.current) observer.observe(counterRef.current);
+
+        return () => {
+            if (counterRef.current) observer.unobserve(counterRef.current);
+        };
+    }, [hasCounted]);
 
     return (
         <section className="w-full py-12 md:py-16 lg:py-20" style={{ backgroundImage: `url(${abtbg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
@@ -64,11 +90,22 @@ export default function SectionTwo() {
                     style={{ height: leftHeight && window.innerWidth > 1024 ? leftHeight : 'auto' }}
                 >
                     <div className="w-full h-full">
-                        <img
-                            src={abtall}
-                            alt="Manufacturing facility"
-                            className="w-full h-full object-contain rounded-2xl"
-                        />
+
+                        <div className='flex gap-2'>
+                            <div className='w-[50%] flex flex-col'>
+                                <div>
+                                    <img src={sect1a} alt="" className="w-full h-auto object-contain" />
+                                </div>
+                                <div className='flex flex-col items-center justify-center flex-1' ref={counterRef}>
+                                    <p className='text-[40px] sm:text-[60px] lg:text-[80px] text-[#1F1E17] leading-none' style={{ fontFamily: '"Covered By Your Grace", cursive' }}>{count}</p>
+                                    <p className='text-[10px] sm:text-[12px] lg:text-[16px] font-medium text-[#4BAF47] text-center -mt-0 sm:-mt-2 lg:-mt-2'>PARTNERS IN WORLD WIDE</p>
+                                </div>
+                            </div>
+
+                            <div className='w-[50%] flex items-center'>
+                                <img src={sect1b} alt="" className="w-full h-auto object-contain" />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
