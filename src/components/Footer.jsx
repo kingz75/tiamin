@@ -70,7 +70,7 @@ export default function Footer() {
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/academy"
                   className="hover:text-[#FAA419] duration-200 flex items-center gap-2"
@@ -78,10 +78,10 @@ export default function Footer() {
                   <FaLeaf />
                   Services
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  to="/careers"
+                  to="/gallery"
                   className="hover:text-[#FAA419] duration-200 flex items-center gap-2"
                 >
                   <FaLeaf />
@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/news"
+                  to="/shop"
                   className="hover:text-[#FAA419] duration-200 flex items-center gap-2"
                 >
                   <FaLeaf />

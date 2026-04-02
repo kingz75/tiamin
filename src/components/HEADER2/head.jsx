@@ -227,7 +227,7 @@ export default function Head({
                 <span
                   className={`flex items-center gap-1 cursor-pointer ${
                     isSubsidiariesActive || mobileSubsOpen
-                      ? "text-[#FAA419] font-bold"
+                      ? "text-[#FAA419] "
                       : "hover:text-[#FAA419]"
                   }`}
                   onClick={() => setMobileSubsOpen(!mobileSubsOpen)}
