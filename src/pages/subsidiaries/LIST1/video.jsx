@@ -1,17 +1,31 @@
-import React from "react";
-import Videobg from "../../../assets/back/list1videobg.png";
+import React, { useState } from "react";
+import Videobg from "../../../assets/back/ricevideo.png";
+import AboutUsVideo from "../../../assets/videos/airvideo.mp4";
 
-const video = () => {
+const Video = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <div>
       <div
-        className=" px-4 sm:px-8 md:px-16 lg:px-20 xl:px-[100px] bg-cover bg-center items-center flex -mt-9 min-h-[300px] sm:min-h-[400px] md:min-h-[450px] lg:min-h-[500px] justify-center"
+        className=" px-4 lg:px-[100px] bg-cover bg-center items-center flex -mt-9  h-[300px] md:h-[400px] lg:h-[500px] justify-center relative transform overflow-hidden cursor-pointer"
         style={{
-          backgroundImage: `url(${Videobg})`,
+          backgroundImage: !isPlaying ? `url(${Videobg})` : 'none',
+          backgroundColor: 'black'
         }}
-      ></div>
+        onClick={() => !isPlaying && setIsPlaying(true)}
+      >
+        {!isPlaying ? null : (
+          <video
+            src={AboutUsVideo}
+            className="absolute inset-0 w-full h-full object-cover"
+            controls
+            autoPlay
+          />
+        )}
+      </div>
     </div>
   );
 };
 
-export default video;
+export default Video;

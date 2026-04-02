@@ -14,6 +14,7 @@ import { useState, useEffect } from "react";
 
 import Call from "../assets/icons/callicon.svg";
 import Mainicon from "../assets/icons/mainicon.svg";
+import Mainicon1 from "../assets/icons/mainicon1.svg";
 
 export default function Header() {
   const location = useLocation();
@@ -31,7 +32,8 @@ export default function Header() {
   }, [menuOpen]);
 
   const navClass = ({ isActive }) =>
-    `hover:text-yellow-400 ${isActive ? "text-yellow-400 font-extrabold" : " "
+    `hover:text-yellow-400 ${
+      isActive ? "text-yellow-400 font-extrabold" : " "
     }`;
 
   return (
@@ -40,7 +42,7 @@ export default function Header() {
         {/* Left section: Logo + Socials */}
         <div className="flex items-center gap-24">
           <Link to="/">
-            <img src={Mainicon} alt="Logo" className="w-[80px]" />
+            <img src={Mainicon1} alt="Logo" className="w-[80px]" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-3">
@@ -92,8 +94,9 @@ export default function Header() {
             onMouseLeave={() => setProjectOpen(false)}
           >
             <span
-              className={`flex items-center gap-1 cursor-pointer ${isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
-                }`}
+              className={`flex items-center gap-1 cursor-pointer ${
+                isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+              }`}
             >
               Subsidiaries{" "}
               {projectOpen ? (
@@ -182,13 +185,26 @@ export default function Header() {
             <FaShoppingCart className="cursor-pointer text-[20px]" />
           </div>
 
-          <div className="flex items-center gap-2 px-4 py-1 text-sm">
-            <img src={Call} alt="" className="w-[35px]" />
-            <div className="leading-tight">
+          <a
+            href="tel:+2348036874426"
+            className="relative group flex items-center gap-2 px-4 py-1 text-sm cursor-pointer"
+          >
+            {/* Call Icon */}
+            <img src={Call} alt="Call" className="w-[35px]" />
+
+            {/* Text */}
+            <div className="leading-tight hidden xl:block">
               <p className="text-[12px] font-medium">Call Anytime</p>
-              <p className="font-semibold text-[16px]">+234 803 687 4426</p>
+              <p className="font-semibold text-[16px] group-hover:text-[#FAA419]">
+                +234 803 687 4426
+              </p>
             </div>
-          </div>
+
+            {/* Tooltip on hover */}
+            <div className="absolute hidden group-hover:block top-full left-1/2 -translate-x-1/2 mt-2 bg-[#00000090] text-white text-xs px-3 py-1 rounded shadow whitespace-nowrap">
+              +234 803 687 4426
+            </div>
+          </a>
         </div>
 
         {/* Hamburger Menu */}
@@ -250,8 +266,9 @@ export default function Header() {
               {/* Subsidiaries Dropdown */}
               <div className="flex flex-col items-start">
                 <span
-                  className={`flex items-center gap-1 cursor-pointer ${isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
-                    }`}
+                  className={`flex items-center gap-1 cursor-pointer ${
+                    isProjectActive ? "text-[#FAA419]" : "hover:text-[#FAA419]"
+                  }`}
                   onClick={() => setMobileSubsOpen(!mobileSubsOpen)}
                 >
                   Subsidiaries{" "}

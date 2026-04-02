@@ -1,22 +1,86 @@
 import { Check } from "lucide-react";
 import Grainicon from "../../../assets/icons/riceicon.svg";
+import Rice1 from "../../../assets/images/riceimage1.jpg";
+import Rice2 from "../../../assets/images/riceimage2.jpg";
+import Rice3 from "../../../assets/images/riceimage3.jpg";
 
 export default function Rice() {
   return (
     <section className="w-full bg-white px-4 sm:px-8 md:px-16 lg:px-20 pt-8 sm:pt-12 md:pt-16">
       {/* Top Heading */}
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-extrabold text-[#4BAF47] mb-3">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-extrabold text-[#4BAF47] mb-10">
           Tiamin Rice Limited
         </h1>
 
-        <p className="text-xs sm:text-sm font-bold text-[#878680] mb-2">
-          276,000 Metric Tons Annual Milling Capacity
+        <p className="text-xs sm:text-sm font-medium text-[#878680] ">
+          Tiamin Rice Mills Limited is a leading Nigerian agro-industrial
+          company incorporated under Nigerian law. Its corporate head office is
+          at the company's operational complex in Kano and Bauchi.
+        </p>
+        <p className="text-xs sm:text-sm font-medium text-[#878680] ">
+          Tiamin operates two state-of-the-art integrated rice mills: a 320
+          MT/day facility in Kano and a 600 MT/day facility in Bauchi. With a
+          combined daily milling capacity of 920 MT, it is the largest rice
+          milling operation in Nigeria, producing over 3.3 million bags of 50kg
+          premium parboiled rice annually. The company also holds a sprawling
+          52,811.53-hectare farmland in Udubo, Gamawa and Toro
+        </p>
+        <p className="text-xs sm:text-sm font-bold text-[#878680] mb-4">
+          Local Government Areas of Bauchi State, ensuring a vital supply of
+          high-quality stock feed.
         </p>
 
-        <p className="text-xs sm:text-sm font-medium text-[#878680] max-w-3xl">
-          This translates to producing 3.3 million bags of premium quality 50kg
-          Tiamin rice each year—making us the largest rice mill in Nigeria.
+        <h5 className="font-extrabold text-[#4BAF47] ">Tiamin today consists of:</h5>
+        <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm font-medium text-[#878680] ">
+          <li>
+            Integrated rice mills with a total annual milling capacity of
+            276,000 tons.
+          </li>
+          <li>
+            A 52,811.53-hectare company-owned farmland for quality paddy
+            cultivation.
+          </li>
+          <li>
+            An out-grower scheme (Tiamin Rice Contract Farming Initiative)
+            engaging local farmers across over 52,000 hectares in Bauchi State.
+          </li>
+          <li>
+            A sustainable by-product utilization system, converting rice husk
+            into environmentally friendly briquette charcoal.
+          </li>
+        </ul>
+        <p className="text-xs sm:text-sm font-medium text-[#878680] mb-4 ">
+          Tiamin has in its employment over 1,500 people directly, with
+          thousands more engaged through its contract farming initiatives.
+        </p>
+
+        <h5 className="font-extrabold text-[#4BAF47] ">Key Initiatives & Expansion Drive</h5>
+        <p className="text-xs sm:text-sm font-medium text-[#878680]">
+          Committed to sustainability and social impact, Tiamin is implementing
+          initiatives to empower local communities and enhance environmental
+          stewardship:
+        </p>
+        <ul className="list-disc pl-5 space-y-2 text-xs sm:text-sm font-medium text-[#878680]">
+          <li>
+            Women & Youth Empowerment: Providing micro-loans for rice-based
+            businesses and establishing training centres in agricultural best
+            practices and entrepreneurship.
+          </li>
+          <li>
+            Sustainable Agriculture: Promoting green farming practices and
+            investing in R&D for resilient rice varieties.
+          </li>
+          <li>
+            Community Energy: Expanding rice husk biomass energy projects and
+            establishing community energy cooperatives focused on renewable
+            solutions.
+          </li>
+        </ul>
+        <p className="text-xs sm:text-sm font-medium text-[#878680]">
+          Tiamin is a privately held Nigerian company dedicated to setting the
+          standard for quality, innovation, and sustainable growth in the
+          Nigerian rice industry.
         </p>
       </div>
 
@@ -24,6 +88,9 @@ export default function Rice() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 lg:gap-16 gap-6 lg:mt-20 mt-8">
         {/* Left Column */}
         <div>
+          <div className="mb-4">
+            <img src={Rice1} alt="" />
+          </div>
           <div className="flex gap-3">
             <img
               src={Grainicon}
@@ -76,6 +143,9 @@ export default function Rice() {
 
         {/* Middle Column */}
         <div>
+          <div className="mb-4">
+            <img src={Rice2} alt="" />
+          </div>
           <div className="flex gap-3">
             <img
               src={Grainicon}
@@ -98,6 +168,9 @@ export default function Rice() {
 
         {/* Right Column */}
         <div>
+          <div className="mb-4">
+            <img src={Rice3} alt="" />
+          </div>
           <div className="flex gap-3">
             <img
               src={Grainicon}

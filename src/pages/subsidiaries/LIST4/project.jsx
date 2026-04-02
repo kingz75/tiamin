@@ -21,7 +21,7 @@ export default function ProductsAndServices() {
           {/* Card 1 */}
           <div className="rounded-[28px] bg-[#EEF8EE] p-4 sm:p-6 md:p-8">
             <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
-              Gold Bars & Coins
+              Crop Dusting Services
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">
               Our crop-dusting services are the perfect solution for farmers and
@@ -50,7 +50,7 @@ export default function ProductsAndServices() {
           {/* Card 3 */}
           <div className="rounded-[28px] bg-[#EEF8EE] p-4 sm:p-6 md:p-8">
             <h3 className="text-[20px] font-extrabold text-[#4BAF47] mb-2 lg:mb-4">
-              Private Jet Charters
+              Tourist Services
             </h3>
             <p className="text-[16px] leading-[24px] text-[#878680] text-justify font-medium">
               Our Tourist Flights will provide our clients with an aerial view
