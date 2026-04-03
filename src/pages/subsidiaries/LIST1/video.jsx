@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Videobg from "../../../assets/back/ricevideo.png";
-import AboutUsVideo from "../../../assets/videos/airvideo.mp4";
+import AboutUsVideo from "../../../assets/videos/ricevideo.mp4";
 
 const Video = () => {
   const [isPlaying, setIsPlaying] = useState(false);
